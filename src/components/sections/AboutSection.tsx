@@ -2,75 +2,87 @@
 import ScrollReveal from "../animations/ScrollReveal";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, XCircle } from "lucide-react";
 
 const AboutSection = () => {
-  const features = [
-    "AI-Powered Solution Development",
-    "Full-Stack Development Services",
-    "User-Centered Design Approach",
-    "Performance Optimization",
-    "Technology Consulting",
-    "Dedicated Support Team"
+  const oldSchoolApproach = [
+    "Broad targeting by 'persona' or 'spray and pray'",
+    "Cold emails flooding inboxes with irrelevant content",
+    "Focusing only on job titles and company profiles",
+    "Generic messaging that gets ignored",
+    "High volume, low conversion approach"
+  ];
+
+  const ourApproach = [
+    "Target prospects based on specific business pains",
+    "Send personalized messages that actually resonate",
+    "Focus on problems you can solve, not just titles",
+    "Build meaningful connections that convert",
+    "Quality over quantity approach"
   ];
 
   return (
     <section id="about" className="section bg-card">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div className="order-2 lg:order-1">
-            <ScrollReveal>
-              <div className="relative">
-                <div className="aspect-square rounded-2xl overflow-hidden relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
-                    alt="Digital technology concept"
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-                <div className="absolute -top-5 -right-5 -bottom-5 -left-5 rounded-2xl border border-white/10 -z-10"></div>
-                
-                <Card className="absolute -bottom-6 -right-6 md:right-6 p-6 max-w-xs">
-                  <div className="flex items-center justify-center mb-4">
-                    <div className="h-16 w-16 rounded-full bg-primary/20 text-primary flex items-center justify-center">
-                      <span className="text-2xl font-bold">5+</span>
-                    </div>
-                  </div>
-                  <p className="text-center text-sm">
-                    Years of experience in delivering cutting-edge technology solutions
-                  </p>
-                </Card>
-              </div>
-            </ScrollReveal>
+        <ScrollReveal>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="inline-block text-sm font-medium text-primary mb-3">
+              THE HARD TRUTH
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+              Why most lead gen agencies <span className="text-gradient">FAIL</span>
+            </h2>
+            <p className="text-muted-foreground mb-8">
+              99% of agencies rely on broad targeting strategies that don't work anymore.
+              Today's buyers are overwhelmed with cold sales emails. Their inboxes are
+              flooded with irrelevant junk.
+            </p>
           </div>
-          
-          <div className="order-1 lg:order-2">
-            <ScrollReveal>
-              <span className="inline-block text-sm font-medium text-primary mb-3">
-                About autoikigai.tech
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                We create <span className="text-gradient">innovative solutions</span> for forward-thinking businesses
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                At autoikigai.tech, we combine advanced technologies with creative thinking to deliver solutions that not only meet the current needs of your business but also prepare you for future challenges and opportunities.
+        </ScrollReveal>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pixel-border p-4 md:p-6">
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold mb-4 text-destructive">THE OLD GAME</h3>
+            
+            <div className="space-y-4">
+              {oldSchoolApproach.map((item, index) => (
+                <div key={index} className="flex gap-4">
+                  <XCircle className="h-6 w-6 text-destructive shrink-0 mt-1" />
+                  <p className="text-muted-foreground">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-6 bg-card border border-white/10 p-6 rounded-lg">
+            <h3 className="text-2xl font-bold mb-4 text-primary">THE NEW STRATEGY</h3>
+            
+            <div className="space-y-4">
+              {ourApproach.map((item, index) => (
+                <div key={index} className="flex gap-4">
+                  <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-1" />
+                  <p className="text-muted-foreground">{item}</p>
+                </div>
+              ))}
+            </div>
+            
+            <div className="mt-8 p-4 bg-black/30 border border-white/10 rounded">
+              <p className="text-gradient font-bold">THE SECRET FORMULA:</p>
+              <p className="mt-2">
+                Target prospects based on the specific business pains you can solve, 
+                rather than just their job title and company.
               </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                {features.map((feature, index) => (
-                  <div key={index} className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                    <span>{feature}</span>
-                  </div>
-                ))}
-              </div>
-              
-              <Button className="button-gradient">
-                Learn More About Us
-              </Button>
-            </ScrollReveal>
+            </div>
           </div>
         </div>
+        
+        <ScrollReveal>
+          <div className="mt-12 text-center">
+            <Button className="button-gradient">
+              Learn Our Targeting Strategy
+            </Button>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
