@@ -23,13 +23,13 @@ const HeroSection = () => {
           
           <ScrollReveal delay={200}>
             <h1 className="text-gradient text-4xl md:text-6xl lg:text-7xl font-bold max-w-4xl leading-tight mb-6">
-              Revolutionize Your Business with AI-Powered Solutions
+              Growth systems for B2B leaders who don’t do guesswork.
             </h1>
           </ScrollReveal>
           
           <ScrollReveal delay={400}>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10">
-              autoikigai.tech delivers cutting-edge technology solutions that transform your business operations, enhance customer experiences, and drive growth in the digital age.
+              Autoikigai.tech delivers cutting-edge technology solutions that transform your business operations, enhance customer experiences, and drive growth in the digital age.
             </p>
           </ScrollReveal>
           
