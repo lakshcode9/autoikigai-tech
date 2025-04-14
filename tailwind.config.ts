@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -12,7 +13,7 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: '1.5rem',
 			screens: {
 				'sm': '640px',
 				'md': '768px',
@@ -57,9 +58,9 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				brand: {
-					'blue': '#2563eb',
-					'cyan': '#06b6d4',
-					'purple': '#8b5cf6'
+					'blue': '#9b87f5',
+					'cyan': '#1EAEDB',
+					'purple': '#7E69AB'
 				}
 			},
 			borderRadius: {
@@ -103,6 +104,14 @@ export default {
 				'float': {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' }
+				},
+				'scanline': {
+					'0%': { transform: 'translateY(0)' },
+					'100%': { transform: 'translateY(100%)' }
+				},
+				'blink': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.7' }
 				}
 			},
 			animation: {
@@ -114,7 +123,9 @@ export default {
 				'slide-up': 'slide-up 0.7s ease-out',
 				'slide-down': 'slide-down 0.7s ease-out',
 				'text-reveal': 'text-reveal 1s ease-out forwards',
-				'float': 'float 3s ease-in-out infinite'
+				'float': 'float 3s ease-in-out infinite',
+				'scanline': 'scanline 8s linear infinite',
+				'blink': 'blink 2s linear infinite'
 			},
 			fontFamily: {
 				sans: ['Joystix', 'sans-serif'],
