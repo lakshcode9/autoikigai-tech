@@ -7,97 +7,119 @@ const ResultsSection = () => {
   return (
     <section className="section bg-background relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-20"></div>
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <ScrollReveal>
+      <div className="container mx-auto px-4">
+        <ScrollReveal>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+              <span className="text-gradient">Real results</span> for real businesses
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              We don't just talk about leads - we deliver revenue. See some of our recent case studies below.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        {/* First Case Study */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-16">
+          <ScrollReveal animation="left">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-                We <span className="text-gradient">connect you</span> with your dream clients.
-              </h2>
+              <h3 className="text-2xl md:text-3xl font-bold leading-tight">
+                <span className="text-gradient">+$145,888</span> in new revenue added in 3 months
+              </h3>
               
               <p className="text-lg text-muted-foreground">
-                We handle all the prospecting and lead generation. Your sales team just takes the calls and closes deals.
+                We secured seven new major partnerships for our client, resulting in over 250,000€ in revenue.
               </p>
               
-              <div className="pixel-border bg-black/20 p-6 space-y-4">
+              <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="h-3 w-3 bg-primary rounded-full animate-pulse"></div>
                   <p className="font-mono">
-                    <span className="text-primary">PIPELINE STATUS:</span> $10,000,000+ in pipeline for companies this year
+                    <span className="text-gradient">+$145,000</span> added to sales pipeline/month
                   </p>
                 </div>
                 
                 <div className="flex items-center gap-4">
                   <div className="h-3 w-3 bg-primary rounded-full animate-pulse"></div>
                   <p className="font-mono">
-                    <span className="text-primary">LEADS BOOKED:</span> Highly qualified decision-makers
-                  </p>
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <div className="h-3 w-3 bg-primary rounded-full animate-pulse"></div>
-                  <p className="font-mono">
-                    <span className="text-primary">YOUR FOCUS:</span> Just take the sales calls and close deals
+                    <span className="text-gradient">15+</span> meetings/month
                   </p>
                 </div>
               </div>
               
               <div>
                 <Button className="button-gradient mt-4">
-                  Get Your Dream Clients <ArrowRightIcon className="ml-2 h-4 w-4" />
+                  See Full Case Study <ArrowRightIcon className="ml-2 h-4 w-4" />
                 </Button>
               </div>
             </div>
           </ScrollReveal>
           
-          <ScrollReveal delay={200}>
-            <div className="relative">
-              <div className="crt-effect rounded-md overflow-hidden border border-white/20">
-                <div className="bg-black/80 p-3 border-b border-white/20 flex items-center gap-2">
-                  <div className="h-3 w-3 rounded-full bg-destructive"></div>
-                  <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-                  <div className="h-3 w-3 rounded-full bg-green-500"></div>
-                  <div className="text-xs text-center flex-1">INBOX.EXE</div>
+          <ScrollReveal animation="right" delay={200}>
+            <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-xl">
+              <img 
+                src="https://cdn.prod.website-files.com/66ddd8483555ab75c693c7bd/66f6f1b59334015ef72e84c9_%24145%2C000%20(5).png"
+                alt="$145,000 revenue case study" 
+                className="w-full h-auto"
+              />
+            </div>
+          </ScrollReveal>
+        </div>
+
+        {/* Second Case Study */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center lg:mt-20">
+          <ScrollReveal animation="left" className="order-2 lg:order-2">
+            <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-xl">
+              <img 
+                src="https://cdn.prod.website-files.com/66ddd8483555ab75c693c7bd/66f6f0b7171fc1eb2b675727_case%20study%201.png"
+                alt="Multiple new clients case study" 
+                className="w-full h-auto"
+              />
+            </div>
+          </ScrollReveal>
+          
+          <ScrollReveal animation="right" delay={200} className="order-1 lg:order-1">
+            <div className="space-y-6">
+              <h3 className="text-2xl md:text-3xl font-bold leading-tight">
+                Multiple new clients from <span className="text-gradient">multiple new markets</span>
+              </h3>
+              
+              <p className="text-lg text-muted-foreground">
+                Our client went from operating locally to operating globally. We were able to get them a meeting with Indeed.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                  <div className="h-3 w-3 bg-primary rounded-full animate-pulse"></div>
+                  <p className="font-mono">
+                    <span className="text-gradient">+$85,000</span> added to sales pipeline/month
+                  </p>
                 </div>
                 
-                <div className="bg-gray-900 p-4 overflow-hidden">
-                  <div className="mb-4 flex items-center justify-between text-xs text-gray-400">
-                    <div className="flex items-center">
-                      <span className="mr-2">INBOX</span>
-                      <span className="bg-primary/80 text-white px-1 rounded">33</span>
-                    </div>
-                    <span>1-50 OF 1,158</span>
-                  </div>
-                  
-                  <div className="space-y-1">
-                    {Array.from({ length: 8 }).map((_, index) => (
-                      <div 
-                        key={index}
-                        className="bg-gray-800 hover:bg-gray-700 cursor-pointer flex items-center p-2 border-l-4 border-primary transition-all"
-                      >
-                        <div className="mr-3 w-6 text-center">
-                          <span className="text-primary text-xs">&gt;</span>
-                        </div>
-                        <div className="flex-1 flex items-center gap-2">
-                          <div className="font-bold text-xs text-white">Dream Team</div>
-                          <div className="bg-primary/80 text-white text-[10px] px-1 rounded">NEW</div>
-                          <div className="text-xs text-white truncate">New Booked Lead: Interested</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                <div className="flex items-center gap-4">
+                  <div className="h-3 w-3 bg-primary rounded-full animate-pulse"></div>
+                  <p className="font-mono">
+                    <span className="text-gradient">+4</span> high-ticket clients
+                  </p>
                 </div>
               </div>
               
-              <div className="absolute -right-4 -bottom-4 h-24 w-24 border-4 border-primary bg-black/50 rounded-full grid place-items-center z-10">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">100%</div>
-                  <div className="text-xs text-white/80">SUCCESS</div>
-                </div>
+              <div>
+                <Button className="button-gradient mt-4">
+                  See Full Case Study <ArrowRightIcon className="ml-2 h-4 w-4" />
+                </Button>
               </div>
             </div>
           </ScrollReveal>
         </div>
+
+        <ScrollReveal delay={300}>
+          <div className="mt-12 text-center">
+            <Button variant="outline" className="border-white/10 hover:bg-white/5">
+              View All Case Studies <ArrowRightIcon className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

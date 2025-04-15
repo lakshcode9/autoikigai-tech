@@ -7,6 +7,7 @@ interface ScrollRevealProps {
   threshold?: number;
   delay?: number;
   animation?: "fade" | "left" | "right" | "bottom" | "top" | "scale" | "rotate" | "none";
+  duration?: number;
 }
 
 const ScrollReveal = ({ 
@@ -14,7 +15,8 @@ const ScrollReveal = ({
   className = "", 
   threshold = 0.1,
   delay = 0,
-  animation = "fade"
+  animation = "fade",
+  duration = 700
 }: ScrollRevealProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -79,6 +81,7 @@ const ScrollReveal = ({
     <div 
       ref={ref} 
       className={`${animationClass} ${isVisible ? 'is-visible' : ''} ${className}`}
+      style={{ transitionDuration: `${duration}ms` }}
     >
       {children}
     </div>
