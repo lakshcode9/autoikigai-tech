@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MenuIcon, X } from "lucide-react";
 
@@ -25,9 +26,9 @@ const Navbar = () => {
       }`}
     >
       <div className="container flex justify-between items-center">
-        <a href="#" className="font-bold text-2xl text-gradient">
+        <Link to="/" className="font-bold text-2xl text-gradient">
           autoikigai.tech
-        </a>
+        </Link>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
@@ -37,7 +38,9 @@ const Navbar = () => {
             <li><a href="#process" className="hover:text-primary transition-colors">Process</a></li>
             <li><a href="#testimonials" className="hover:text-primary transition-colors">Testimonials</a></li>
           </ul>
-          <Button className="button-gradient">Contact Us</Button>
+          <Link to="/contact">
+            <Button className="button-gradient">Contact Us</Button>
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -94,12 +97,11 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="pt-4">
-                <Button 
-                  className="button-gradient w-full"
-                  onClick={toggleMenu}
-                >
-                  Contact Us
-                </Button>
+                <Link to="/contact" onClick={toggleMenu}>
+                  <Button className="button-gradient w-full">
+                    Contact Us
+                  </Button>
+                </Link>
               </li>
             </ul>
           </nav>

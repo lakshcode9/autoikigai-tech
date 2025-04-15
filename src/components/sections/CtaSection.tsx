@@ -2,6 +2,7 @@
 import ScrollReveal from "../animations/ScrollReveal";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CtaSection = () => {
   return (
@@ -20,10 +21,12 @@ const CtaSection = () => {
                 Contact us today to discuss how our innovative solutions can help you achieve your business objectives and stay ahead of the competition.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="button-gradient">
-                  Get in Touch
-                  <ArrowRightIcon className="ml-2 h-4 w-4" />
-                </Button>
+                <Link to="/contact">
+                  <Button size="lg" className="button-gradient">
+                    Get in Touch
+                    <ArrowRightIcon className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
                 <Button size="lg" variant="outline">
                   View Our Portfolio
                 </Button>
