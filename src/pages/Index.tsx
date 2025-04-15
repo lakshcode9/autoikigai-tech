@@ -11,10 +11,13 @@ import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CtaSection from '@/components/sections/CtaSection';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Index = () => {
+  const isMobile = useIsMobile();
+  
   // Initialize scroll animations
   useEffect(() => {
     // Smooth reveal for header elements on page load
@@ -24,28 +27,25 @@ const Index = () => {
       { opacity: 1, y: 0, duration: 1, stagger: 0.2, delay: 0.5 }
     );
 
-    // Setup scroll trigger animations for sections
+    // Setup scroll trigger animations for sections with mobile-friendly settings
     const sections = document.querySelectorAll('section');
     sections.forEach((section) => {
       gsap.fromTo(
         section,
-        { opacity: 0, y: 50 },
+        { opacity: 0, y: 30 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.8,
+          duration: isMobile ? 0.6 : 0.8,
           ease: 'power2.out',
           scrollTrigger: {
             trigger: section,
-            start: 'top 80%',
+            start: 'top 85%',
             toggleActions: 'play none none none',
           },
         }
       );
     });
-
-    // Detect mobile devices
-    const isMobile = window.innerWidth < 768;
     
     // Apply additional animations for desktop
     if (!isMobile) {
@@ -68,7 +68,7 @@ const Index = () => {
       // Clean up ScrollTrigger when component unmounts
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <div className="min-h-screen bg-background">

@@ -112,6 +112,14 @@ export default {
 				'blink': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.7' }
+				},
+				'slide-in-left': {
+					'0%': { transform: 'translateX(-100%)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'slide-in-right': {
+					'0%': { transform: 'translateX(100%)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
 				}
 			},
 			animation: {
@@ -125,11 +133,15 @@ export default {
 				'text-reveal': 'text-reveal 1s ease-out forwards',
 				'float': 'float 3s ease-in-out infinite',
 				'scanline': 'scanline 8s linear infinite',
-				'blink': 'blink 2s linear infinite'
+				'blink': 'blink 2s linear infinite',
+				'slide-in-left': 'slide-in-left 0.7s ease-out',
+				'slide-in-right': 'slide-in-right 0.7s ease-out'
 			},
 			fontFamily: {
 				sans: ['Joystix', 'sans-serif'],
-				mono: ['IBM Plex Mono', 'monospace']
+				mono: ['IBM Plex Mono', 'monospace'],
+				'press-start': ['"Press Start 2P"', 'cursive'],
+				'vt323': ['"VT323"', 'monospace']
 			}
 		}
 	},

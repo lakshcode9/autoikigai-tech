@@ -6,13 +6,15 @@ interface ScrollRevealProps {
   className?: string;
   threshold?: number;
   delay?: number;
+  animation?: "fade" | "left" | "right" | "bottom" | "top" | "scale" | "rotate" | "none";
 }
 
 const ScrollReveal = ({ 
   children, 
   className = "", 
   threshold = 0.1,
-  delay = 0
+  delay = 0,
+  animation = "fade"
 }: ScrollRevealProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -29,7 +31,7 @@ const ScrollReveal = ({
       },
       {
         threshold,
-        rootMargin: "0px 0px -100px 0px"
+        rootMargin: "0px 0px -50px 0px"
       }
     );
     
@@ -44,10 +46,39 @@ const ScrollReveal = ({
     };
   }, [threshold, delay]);
   
+  let animationClass = "";
+  
+  switch (animation) {
+    case "left":
+      animationClass = "come-in-left";
+      break;
+    case "right":
+      animationClass = "come-in-right";
+      break;
+    case "bottom":
+      animationClass = "come-in-bottom";
+      break;
+    case "top":
+      animationClass = "come-in-top";
+      break;
+    case "scale":
+      animationClass = "scale-in";
+      break;
+    case "rotate":
+      animationClass = "rotate-in";
+      break;
+    case "fade":
+      animationClass = "fade-in";
+      break;
+    case "none":
+      animationClass = "";
+      break;
+  }
+  
   return (
     <div 
       ref={ref} 
-      className={`reveal-on-scroll ${isVisible ? 'is-visible' : ''} ${className}`}
+      className={`${animationClass} ${isVisible ? 'is-visible' : ''} ${className}`}
     >
       {children}
     </div>
