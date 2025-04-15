@@ -34,7 +34,7 @@ const ScaleSection = () => {
                 </div>
                 
                 <div className="space-y-3">
-                  <h3 className="text-xl font-press-start">3. We give you a single control center for >75 inboxes</h3>
+                  <h3 className="text-xl font-press-start">3. We give you a single control center for {" > "}75 inboxes</h3>
                   <p className="text-muted-foreground text-lg">
                     Gone are the volume bottlenecks of 1 SDR = 1 inbox. When you work with
                     us, you send at whatever scale you'd like to send at.
