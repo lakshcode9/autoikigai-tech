@@ -8,6 +8,7 @@ import ResultsSection from '@/components/sections/ResultsSection';
 import ProcessSection from '@/components/sections/ProcessSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CtaSection from '@/components/sections/CtaSection';
+import ScaleSection from '@/components/sections/ScaleSection';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
         <HeroSection />
         <AboutSection />
         <ServicesSection />
+        <ScaleSection />
         <ResultsSection />
         <ProcessSection />
         <TestimonialsSection />
