@@ -8,9 +8,9 @@ const ScaleSection = () => {
   return (
     <section className="section bg-card relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-20"></div>
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 items-center">
-          <ScrollReveal animation="left">
+      <div className="container mx-auto px-3 md:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-8 md:gap-y-12 items-center">
+          <ScrollReveal animation="fade">
             <div className="space-y-6 md:space-y-8">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
                 Scale fast and get new clients <span className="text-gradient">predictably.</span>
@@ -18,7 +18,7 @@ const ScaleSection = () => {
               
               <div className="space-y-5 md:space-y-6">
                 <div className="space-y-2 md:space-y-3">
-                  <h3 className="text-lg md:text-xl font-press-start">1. We use AI carefully, to fill in the blanks.</h3>
+                  <h3 className="text-lg md:text-xl font-press-start break-words">1. We use AI carefully, to fill in the blanks.</h3>
                   <p className="text-muted-foreground text-sm md:text-lg">
                     AI is terrible at writing entire emails, and people can easily detect when it's
                     used. But, AI is great at writing tightly-constrained variables. We place
@@ -28,7 +28,7 @@ const ScaleSection = () => {
                 </div>
                 
                 <div className="space-y-2 md:space-y-3">
-                  <h3 className="text-lg md:text-xl font-press-start">2. We target by pain, not persona.</h3>
+                  <h3 className="text-lg md:text-xl font-press-start break-words">2. We target by pain, not persona.</h3>
                   <p className="text-muted-foreground text-sm md:text-lg">
                     We'll scour the internet to find buyers that actually have the pain your
                     product solves (ex. open job roles, customer reviews, company news, job
@@ -37,7 +37,7 @@ const ScaleSection = () => {
                 </div>
                 
                 <div className="space-y-2 md:space-y-3">
-                  <h3 className="text-lg md:text-xl font-press-start">3. We give you a single control center for {">"}75 inboxes</h3>
+                  <h3 className="text-lg md:text-xl font-press-start break-words">3. We give you a single control center</h3>
                   <p className="text-muted-foreground text-sm md:text-lg">
                     Gone are the volume bottlenecks of 1 SDR = 1 inbox. When you work with
                     us, you send at whatever scale you'd like to send at.
@@ -47,7 +47,7 @@ const ScaleSection = () => {
             </div>
           </ScrollReveal>
           
-          <ScrollReveal animation="right" delay={200}>
+          <ScrollReveal animation="fade" delay={200}>
             <div className="relative rounded-lg border border-white/10 overflow-hidden shadow-xl">
               <img 
                 src="https://cdn.prod.website-files.com/66ddd8483555ab75c693c7bd/66ddd94dae04b9432ae7bc66_Untitled%20design%20(24).png"

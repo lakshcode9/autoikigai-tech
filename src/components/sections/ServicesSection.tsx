@@ -52,14 +52,14 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="section overflow-x-auto">
+    <section id="services" className="section overflow-hidden px-3 md:px-6">
       <div className="container mx-auto">
         <ScrollReveal>
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
             <span className="inline-block text-sm font-medium text-primary mb-3">
               Our Service
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight">
               <span className="text-gradient">AI-Powered</span> Growth Systems
             </h2>
             <p className="text-muted-foreground">
@@ -68,35 +68,35 @@ const ServicesSection = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pixel-border p-4 md:p-6">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold mb-4">What 99% of SDRs/lead gen agencies do</h3>
-            <p className="text-muted-foreground mb-6">Let's target all CTOs at technology companies with 500+ employees.</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 p-3 md:p-6 border border-white/10 rounded-lg">
+          <div className="space-y-4 md:space-y-6">
+            <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4">What 99% of SDRs/lead gen agencies do</h3>
+            <p className="text-muted-foreground mb-4 md:mb-6">Let's target all CTOs at technology companies with 500+ employees.</p>
             
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               {traditionalApproaches.map((item, index) => (
-                <div key={index} className="flex gap-4">
-                  <XCircle className="h-6 w-6 text-destructive shrink-0 mt-1" />
+                <div key={index} className="flex gap-3 md:gap-4">
+                  <XCircle className="h-5 w-5 md:h-6 md:w-6 text-destructive shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-bold text-lg">{item.title}</h4>
-                    <p className="text-muted-foreground">{item.description}</p>
+                    <h4 className="font-bold text-base md:text-lg">{item.title}</h4>
+                    <p className="text-muted-foreground text-sm md:text-base">{item.description}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="space-y-6 bg-card border border-white/10 p-6 rounded-lg">
-            <h3 className="text-2xl font-bold mb-4">The "autoikigai.tech Way"</h3>
-            <p className="text-muted-foreground mb-6">Let's target companies struggling with digital transformation or looking to implement AI solutions in their operations.</p>
+          <div className="space-y-4 md:space-y-6 bg-card border border-white/10 p-4 md:p-6 rounded-lg">
+            <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4">The "autoikigai.tech Way"</h3>
+            <p className="text-muted-foreground mb-4 md:mb-6">Let's target companies struggling with digital transformation or looking to implement AI solutions in their operations.</p>
             
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               {autoikigaiApproach.map((item, index) => (
-                <div key={index} className="flex gap-4">
-                  <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-1" />
+                <div key={index} className="flex gap-3 md:gap-4">
+                  <CheckCircle className="h-5 w-5 md:h-6 md:w-6 text-primary shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-bold text-lg">{item.title}</h4>
-                    <p className="text-muted-foreground">{item.description}</p>
+                    <h4 className="font-bold text-base md:text-lg">{item.title}</h4>
+                    <p className="text-muted-foreground text-sm md:text-base">{item.description}</p>
                   </div>
                 </div>
               ))}
