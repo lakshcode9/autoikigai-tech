@@ -3,8 +3,11 @@ import ScrollReveal from "../animations/ScrollReveal";
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
 import { CheckCircle, XCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const ServicesSection = () => {
+  const isMobile = useIsMobile();
+
   const traditionalApproaches = [
     {
       title: "Generic Outreach:",
@@ -54,7 +57,7 @@ const ServicesSection = () => {
   return (
     <section id="services" className="section overflow-hidden px-3 md:px-6">
       <div className="container mx-auto">
-        <ScrollReveal>
+        <ScrollReveal delay={0}>
           <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
             <span className="inline-block text-sm font-medium text-primary mb-3">
               Our Service
@@ -78,8 +81,8 @@ const ServicesSection = () => {
                 <div key={index} className="flex gap-3 md:gap-4">
                   <XCircle className="h-5 w-5 md:h-6 md:w-6 text-destructive shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-bold text-base md:text-lg">{item.title}</h4>
-                    <p className="text-muted-foreground text-sm md:text-base">{item.description}</p>
+                    <h4 className="font-bold text-base md:text-lg break-words">{item.title}</h4>
+                    <p className="text-muted-foreground text-sm md:text-base break-words">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -87,7 +90,7 @@ const ServicesSection = () => {
           </div>
 
           <div className="space-y-4 md:space-y-6 bg-card border border-white/10 p-4 md:p-6 rounded-lg">
-            <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4">The "autoikigai.tech Way"</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4 break-words">The "autoikigai.tech Way"</h3>
             <p className="text-muted-foreground mb-4 md:mb-6">Let's target companies struggling with digital transformation or looking to implement AI solutions in their operations.</p>
             
             <div className="space-y-4 md:space-y-6">
@@ -95,8 +98,8 @@ const ServicesSection = () => {
                 <div key={index} className="flex gap-3 md:gap-4">
                   <CheckCircle className="h-5 w-5 md:h-6 md:w-6 text-primary shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-bold text-base md:text-lg">{item.title}</h4>
-                    <p className="text-muted-foreground text-sm md:text-base">{item.description}</p>
+                    <h4 className="font-bold text-base md:text-lg break-words">{item.title}</h4>
+                    <p className="text-muted-foreground text-sm md:text-base break-words">{item.description}</p>
                   </div>
                 </div>
               ))}

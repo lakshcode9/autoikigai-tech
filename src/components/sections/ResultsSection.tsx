@@ -2,13 +2,14 @@
 import ScrollReveal from "../animations/ScrollReveal";
 import { ArrowRightIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const ResultsSection = () => {
   return (
     <section className="section bg-background relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-20"></div>
       <div className="container mx-auto px-4">
-        <ScrollReveal>
+        <ScrollReveal delay={0}>
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
               <span className="text-gradient">Real results</span> for real businesses
@@ -21,9 +22,9 @@ const ResultsSection = () => {
 
         {/* First Case Study */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-16">
-          <ScrollReveal animation="left">
+          <ScrollReveal animation="left" delay={100}>
             <div className="space-y-6">
-              <h3 className="text-2xl md:text-3xl font-bold leading-tight">
+              <h3 className="text-2xl md:text-3xl font-bold leading-tight break-words">
                 <span className="text-gradient">+$145,888</span> in new revenue added in 3 months
               </h3>
               
@@ -34,14 +35,14 @@ const ResultsSection = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="h-3 w-3 bg-primary rounded-full animate-pulse"></div>
-                  <p className="font-mono">
+                  <p className="font-mono break-words">
                     <span className="text-gradient">+$145,000</span> added to sales pipeline/month
                   </p>
                 </div>
                 
                 <div className="flex items-center gap-4">
                   <div className="h-3 w-3 bg-primary rounded-full animate-pulse"></div>
-                  <p className="font-mono">
+                  <p className="font-mono break-words">
                     <span className="text-gradient">15+</span> meetings/month
                   </p>
                 </div>
@@ -49,7 +50,7 @@ const ResultsSection = () => {
               
               <div>
                 <Button className="button-gradient mt-4">
-                  See Full Case Study <ArrowRightIcon className="ml-2 h-4 w-4" />
+                  Case Study Coming Soon
                 </Button>
               </div>
             </div>
@@ -68,7 +69,7 @@ const ResultsSection = () => {
 
         {/* Second Case Study */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center lg:mt-20">
-          <ScrollReveal animation="left" className="order-2 lg:order-2">
+          <ScrollReveal animation="left" className="order-2 lg:order-2" delay={100}>
             <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-xl">
               <img 
                 src="https://cdn.prod.website-files.com/66ddd8483555ab75c693c7bd/66f6f0b7171fc1eb2b675727_case%20study%201.png"
@@ -80,7 +81,7 @@ const ResultsSection = () => {
           
           <ScrollReveal animation="right" delay={200} className="order-1 lg:order-1">
             <div className="space-y-6">
-              <h3 className="text-2xl md:text-3xl font-bold leading-tight">
+              <h3 className="text-2xl md:text-3xl font-bold leading-tight break-words">
                 Multiple new clients from <span className="text-gradient">multiple new markets</span>
               </h3>
               
@@ -91,14 +92,14 @@ const ResultsSection = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="h-3 w-3 bg-primary rounded-full animate-pulse"></div>
-                  <p className="font-mono">
+                  <p className="font-mono break-words">
                     <span className="text-gradient">+$85,000</span> added to sales pipeline/month
                   </p>
                 </div>
                 
                 <div className="flex items-center gap-4">
                   <div className="h-3 w-3 bg-primary rounded-full animate-pulse"></div>
-                  <p className="font-mono">
+                  <p className="font-mono break-words">
                     <span className="text-gradient">+4</span> high-ticket clients
                   </p>
                 </div>
@@ -106,7 +107,7 @@ const ResultsSection = () => {
               
               <div>
                 <Button className="button-gradient mt-4">
-                  See Full Case Study <ArrowRightIcon className="ml-2 h-4 w-4" />
+                  Case Study Coming Soon
                 </Button>
               </div>
             </div>
@@ -115,9 +116,11 @@ const ResultsSection = () => {
 
         <ScrollReveal delay={300}>
           <div className="mt-12 text-center">
-            <Button variant="outline" className="border-white/10 hover:bg-white/5">
-              View All Case Studies <ArrowRightIcon className="ml-2 h-4 w-4" />
-            </Button>
+            <Link to="/case-studies">
+              <Button variant="outline" className="border-white/10 hover:bg-white/5">
+                View All Case Studies <ArrowRightIcon className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </ScrollReveal>
       </div>

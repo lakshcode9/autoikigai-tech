@@ -10,9 +10,15 @@ import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CtaSection from '@/components/sections/CtaSection';
 import ScaleSection from '@/components/sections/ScaleSection';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { useEffect } from 'react';
 
 const Index = () => {
   const isMobile = useIsMobile();
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">

@@ -4,6 +4,7 @@ import ScrollReveal from "../animations/ScrollReveal";
 import ParallaxItem from "../animations/ParallaxItem";
 import { ArrowRightIcon, ArrowDownIcon } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const isMobile = useIsMobile();
@@ -18,36 +19,40 @@ const HeroSection = () => {
       
       <div className="container mx-auto relative z-10">
         <div className="flex flex-col items-center text-center">
-          <ScrollReveal animation={isMobile ? "bottom" : "top"}>
+          <ScrollReveal delay={0} animation="fade">
             <span className="inline-block py-1 px-3 mb-4 md:mb-6 rounded-full bg-secondary text-xs md:text-sm font-medium text-foreground">
               Transforming Ideas into Digital Realities
             </span>
           </ScrollReveal>
           
-          <ScrollReveal animation={isMobile ? "bottom" : "left"} delay={200}>
+          <ScrollReveal animation="fade" delay={100}>
             <h1 className="text-gradient text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold max-w-4xl leading-tight mb-4 md:mb-6">
               Growth systems for B2B leaders who don't do guesswork.
             </h1>
           </ScrollReveal>
           
-          <ScrollReveal animation={isMobile ? "bottom" : "right"} delay={400}>
+          <ScrollReveal animation="fade" delay={200}>
             <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mb-6 md:mb-10">
               Autoikigai.tech delivers cutting-edge technology solutions that transform your business operations, enhance customer experiences, and drive growth in the digital age.
             </p>
           </ScrollReveal>
           
-          <ScrollReveal animation="scale" delay={600} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Button size={isMobile ? "default" : "lg"} className="button-gradient w-full sm:w-auto">
-              Get Started
-              <ArrowRightIcon className="ml-2 h-4 w-4" />
-            </Button>
-            <Button size={isMobile ? "default" : "lg"} variant="outline" className="w-full sm:w-auto">
-              Learn More
-            </Button>
+          <ScrollReveal animation="scale" delay={300} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <Link to="/contact">
+              <Button size={isMobile ? "default" : "lg"} className="button-gradient w-full sm:w-auto">
+                Get Started
+                <ArrowRightIcon className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <Link to="/about">
+              <Button size={isMobile ? "default" : "lg"} variant="outline" className="w-full sm:w-auto">
+                Learn More
+              </Button>
+            </Link>
           </ScrollReveal>
 
           <ParallaxItem className="mt-12 md:mt-20" speed={0.2}>
-            <ScrollReveal animation="fade" delay={800}>
+            <ScrollReveal animation="fade" delay={400}>
               <a href="#about" className="flex flex-col items-center group">
                 <span className="text-xs md:text-sm text-muted-foreground mb-2">Scroll to explore</span>
                 <ArrowDownIcon className="h-5 w-5 md:h-6 md:w-6 animate-bounce text-primary" />

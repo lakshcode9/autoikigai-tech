@@ -24,12 +24,15 @@ const ScrollReveal = ({
   const isMobile = useIsMobile();
   
   useEffect(() => {
+    // Reduce delay on mobile for better responsiveness
+    const actualDelay = isMobile ? Math.min(delay, 100) : delay;
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setTimeout(() => {
             setIsVisible(true);
-          }, delay);
+          }, actualDelay);
           observer.unobserve(entry.target);
         }
       },
@@ -48,7 +51,7 @@ const ScrollReveal = ({
         observer.unobserve(ref.current);
       }
     };
-  }, [threshold, delay]);
+  }, [threshold, delay, isMobile]);
   
   // Simplify animations on mobile
   let animationClass = "";
@@ -105,7 +108,10 @@ const ScrollReveal = ({
     <div 
       ref={ref} 
       className={`${animationClass} ${isVisible ? 'is-visible' : ''} ${className}`}
-      style={{ transitionDuration: `${isMobile ? Math.min(duration, 500) : duration}ms` }}
+      style={{ 
+        transitionDuration: `${isMobile ? Math.min(duration, 500) : duration}ms`,
+        width: "100%" // Ensure content is contained
+      }}
     >
       {children}
     </div>
