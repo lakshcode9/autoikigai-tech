@@ -5,16 +5,13 @@ import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ServicesSection from '@/components/sections/ServicesSection';
 import ResultsSection from '@/components/sections/ResultsSection';
-import ProcessSection from '@/components/sections/ProcessSection';
+import ComparisonSection from '@/components/sections/ComparisonSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CtaSection from '@/components/sections/CtaSection';
 import ScaleSection from '@/components/sections/ScaleSection';
-import { useIsMobile } from '@/hooks/use-mobile';
 import { useEffect } from 'react';
 
 const Index = () => {
-  const isMobile = useIsMobile();
-
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -29,7 +26,7 @@ const Index = () => {
         <ServicesSection />
         <ScaleSection />
         <ResultsSection />
-        <ProcessSection />
+        <ComparisonSection />
         <TestimonialsSection />
         <CtaSection />
       </main>
