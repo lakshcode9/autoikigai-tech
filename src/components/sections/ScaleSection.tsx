@@ -1,22 +1,25 @@
 
 import ScrollReveal from "../animations/ScrollReveal";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const ScaleSection = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <section className="section bg-card relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-20"></div>
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 items-center">
           <ScrollReveal animation="left">
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
                 Scale fast and get new clients <span className="text-gradient">predictably.</span>
               </h2>
               
-              <div className="space-y-6">
-                <div className="space-y-3">
-                  <h3 className="text-xl font-press-start">1. We use AI carefully, to fill in the blanks.</h3>
-                  <p className="text-muted-foreground text-lg">
+              <div className="space-y-5 md:space-y-6">
+                <div className="space-y-2 md:space-y-3">
+                  <h3 className="text-lg md:text-xl font-press-start">1. We use AI carefully, to fill in the blanks.</h3>
+                  <p className="text-muted-foreground text-sm md:text-lg">
                     AI is terrible at writing entire emails, and people can easily detect when it's
                     used. But, AI is great at writing tightly-constrained variables. We place
                     these variables inside thoughtful templates written by humans, ensuring
@@ -24,18 +27,18 @@ const ScaleSection = () => {
                   </p>
                 </div>
                 
-                <div className="space-y-3">
-                  <h3 className="text-xl font-press-start">2. We target by pain, not persona.</h3>
-                  <p className="text-muted-foreground text-lg">
+                <div className="space-y-2 md:space-y-3">
+                  <h3 className="text-lg md:text-xl font-press-start">2. We target by pain, not persona.</h3>
+                  <p className="text-muted-foreground text-sm md:text-lg">
                     We'll scour the internet to find buyers that actually have the pain your
                     product solves (ex. open job roles, customer reviews, company news, job
                     changes, and more). Then, we reach out to them with our aligned offer.
                   </p>
                 </div>
                 
-                <div className="space-y-3">
-                  <h3 className="text-xl font-press-start">3. We give you a single control center for {" > "}75 inboxes</h3>
-                  <p className="text-muted-foreground text-lg">
+                <div className="space-y-2 md:space-y-3">
+                  <h3 className="text-lg md:text-xl font-press-start">3. We give you a single control center for {">"}75 inboxes</h3>
+                  <p className="text-muted-foreground text-sm md:text-lg">
                     Gone are the volume bottlenecks of 1 SDR = 1 inbox. When you work with
                     us, you send at whatever scale you'd like to send at.
                   </p>
