@@ -6,7 +6,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 const ComparisonSection = () => {
   // Comparison data
   const comparisonData = {
-    headers: ["myoprocess.", "Hiring an SDR", "Marketing Agency", "Do It Yourself"],
+    headers: ["autoikigai.", "Hiring an SDR", "Marketing Agency", "Do It Yourself"],
     rows: [
       {
         title: "Time to get results",

@@ -1,7 +1,7 @@
 
 import ScrollReveal from "../animations/ScrollReveal";
 import { Button } from "@/components/ui/button";
-import { ArrowRightIcon } from "lucide-react";
+import { ArrowRightIcon, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const CtaSection = () => {
@@ -27,9 +27,12 @@ const CtaSection = () => {
                     <ArrowRightIcon className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
-                <Button size="lg" variant="outline">
-                  View Our Portfolio
-                </Button>
+                <a href="https://lakshpujary.me" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="outline">
+                    View Our Founder's Portfolio
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

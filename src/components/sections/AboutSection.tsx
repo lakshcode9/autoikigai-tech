@@ -1,7 +1,6 @@
 
 import ScrollReveal from "../animations/ScrollReveal";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { CheckCircle, XCircle } from "lucide-react";
 
 const AboutSection = () => {
@@ -55,7 +54,7 @@ const AboutSection = () => {
           </div>
 
           <div className="space-y-6 bg-card border border-white/10 p-6 rounded-lg">
-            <h3 className="text-2xl font-bold mb-4 text-primary">THE NEW STRATEGY</h3>
+            <h3 className="text-2xl font-bold mb-4 text-primary">THE AUTOIKIGAI WAY</h3>
             
             <div className="space-y-4">
               {ourApproach.map((item, index) => (

@@ -2,7 +2,6 @@
 import ScrollReveal from "../animations/ScrollReveal";
 import { ArrowRightIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 const ResultsSection = () => {
   return (
@@ -11,7 +10,7 @@ const ResultsSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal delay={0}>
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
               <span className="text-gradient">Real results</span> for real businesses
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -113,16 +112,6 @@ const ResultsSection = () => {
             </div>
           </ScrollReveal>
         </div>
-
-        <ScrollReveal delay={300}>
-          <div className="mt-12 text-center">
-            <Link to="/case-studies">
-              <Button variant="outline" className="border-white/10 hover:bg-white/5">
-                View All Case Studies <ArrowRightIcon className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );

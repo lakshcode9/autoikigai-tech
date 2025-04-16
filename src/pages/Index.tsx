@@ -9,6 +9,7 @@ import ComparisonSection from '@/components/sections/ComparisonSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CtaSection from '@/components/sections/CtaSection';
 import ScaleSection from '@/components/sections/ScaleSection';
+import AboutUsSection from '@/components/sections/AboutUsSection';
 import { useEffect } from 'react';
 
 const Index = () => {
@@ -27,6 +28,7 @@ const Index = () => {
         <ScaleSection />
         <ResultsSection />
         <ComparisonSection />
+        <AboutUsSection />
         <TestimonialsSection />
         <CtaSection />
       </main>
