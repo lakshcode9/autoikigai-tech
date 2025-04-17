@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Careers from "./pages/Careers";
+import TermsPolicy from "./pages/TermsPolicy";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -33,6 +35,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/terms-policy" element={<TermsPolicy />} />
           <Route path="/about" element={<NotFound />} />
           <Route path="/case-studies" element={<NotFound />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

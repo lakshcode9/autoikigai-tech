@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -36,7 +37,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li><a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a></li>
               <li><a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Services</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Careers</a></li>
+              <li><Link to="/careers" className="text-muted-foreground hover:text-foreground transition-colors">Careers</Link></li>
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Press</a></li>
             </ul>
           </div>
@@ -69,9 +70,11 @@ const Footer = () => {
         <div className="border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} autoikigai.tech. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
+            <Link to="/terms-policy" className="hover:text-foreground transition-colors">Terms & Privacy Policy</Link>
             <a href="#" className="hover:text-foreground transition-colors">Cookie Policy</a>
+            <a href="https://lakshpujary.me" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+              View our founder's portfolio
+            </a>
           </div>
         </div>
       </div>

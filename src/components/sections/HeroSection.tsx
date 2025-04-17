@@ -10,14 +10,14 @@ const HeroSection = () => {
   const isMobile = useIsMobile();
   
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 md:pt-24 pb-8 md:pb-12 px-4 md:px-6 overflow-hidden grid-pattern">
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-16 md:pt-20 pb-8 md:pb-12 px-4 md:px-6 overflow-hidden grid-pattern">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 -left-20 w-48 md:w-72 h-48 md:h-72 bg-brand-blue/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 -right-20 w-48 md:w-72 h-48 md:h-72 bg-brand-cyan/20 rounded-full blur-3xl"></div>
       </div>
       
-      <div className="container mx-auto relative z-10">
+      <div className="container mx-auto relative z-10 px-2 md:px-6">
         <div className="flex flex-col items-center text-center">
           <ScrollReveal delay={0} animation="fade">
             <span className="inline-block py-1 px-3 mb-4 md:mb-6 rounded-full bg-secondary text-xs md:text-sm font-medium text-foreground">
@@ -26,7 +26,7 @@ const HeroSection = () => {
           </ScrollReveal>
           
           <ScrollReveal animation="fade" delay={100}>
-            <h1 className="text-gradient text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold max-w-4xl leading-tight mb-4 md:mb-6">
+            <h1 className="text-gradient text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-bold max-w-4xl leading-tight mb-4 md:mb-6">
               Growth systems for B2B leaders who don't do guesswork.
             </h1>
           </ScrollReveal>
@@ -51,7 +51,7 @@ const HeroSection = () => {
             </Link>
           </ScrollReveal>
 
-          <ParallaxItem className="mt-12 md:mt-20" speed={0.2}>
+          <ParallaxItem className="mt-10 md:mt-16" speed={0.2}>
             <ScrollReveal animation="fade" delay={400}>
               <a href="#about" className="flex flex-col items-center group">
                 <span className="text-xs md:text-sm text-muted-foreground mb-2">Scroll to explore</span>
