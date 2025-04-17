@@ -16,7 +16,7 @@ import FaqSection from '@/components/sections/FaqSection';
 
 const Index = () => {
   return (
-    <div className="bg-background">
+    <div className="bg-background w-full overflow-hidden">
       <Navbar />
       <HeroSection />
       <div className="relative">

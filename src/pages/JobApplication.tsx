@@ -10,6 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { ArrowLeftIcon, Send } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const JobApplication = () => {
   const { jobId } = useParams();
@@ -17,6 +18,7 @@ const JobApplication = () => {
   const { toast } = useToast();
   const [jobTitle, setJobTitle] = useState('');
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   // Form state
   const [fullName, setFullName] = useState('');
@@ -40,11 +42,11 @@ const JobApplication = () => {
     }
   }, [jobId, navigate]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Basic validation
-    if (!fullName || !email) {
+    if (!fullName || !email || !resumeLink) {
       toast({
         title: "Error",
         description: "Please fill in all required fields",
@@ -53,13 +55,48 @@ const JobApplication = () => {
       return;
     }
     
-    // Submit form logic would go here
-    // For now, show success message
-    setFormSubmitted(true);
-    toast({
-      title: "Application Submitted",
-      description: "Thank you for your application. We'll be in touch soon!",
-    });
+    try {
+      setIsSubmitting(true);
+      
+      // Submit to Supabase
+      const { error } = await supabase
+        .from('job_applications')
+        .insert({
+          job_id: jobId,
+          job_title: jobTitle,
+          full_name: fullName,
+          email: email,
+          phone: phone,
+          resume_link: resumeLink,
+          cover_letter: coverLetter
+        });
+        
+      if (error) {
+        console.error('Error submitting application:', error);
+        toast({
+          title: "Error",
+          description: "There was a problem submitting your application. Please try again.",
+          variant: "destructive"
+        });
+        setIsSubmitting(false);
+        return;
+      }
+      
+      // Show success message
+      setFormSubmitted(true);
+      toast({
+        title: "Application Submitted",
+        description: "Thank you for your application. We'll be in touch soon!",
+      });
+    } catch (err) {
+      console.error('Unexpected error:', err);
+      toast({
+        title: "Error",
+        description: "An unexpected error occurred. Please try again.",
+        variant: "destructive"
+      });
+      setIsSubmitting(false);
+    }
   };
 
   if (formSubmitted) {
@@ -181,8 +218,12 @@ const JobApplication = () => {
                       />
                     </div>
                     
-                    <Button type="submit" className="button-gradient w-full">
-                      Submit Application
+                    <Button 
+                      type="submit" 
+                      className="button-gradient w-full" 
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? 'Submitting...' : 'Submit Application'}
                     </Button>
                   </form>
                 </div>
