@@ -1,37 +1,37 @@
 
+import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ServicesSection from '@/components/sections/ServicesSection';
+import ProcessSection from '@/components/sections/ProcessSection';
+import ComparisonSection from "@/components/sections/ComparisonSection";
 import ResultsSection from '@/components/sections/ResultsSection';
-import ComparisonSection from '@/components/sections/ComparisonSection';
+import ScaleSection from '@/components/sections/ScaleSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CtaSection from '@/components/sections/CtaSection';
-import ScaleSection from '@/components/sections/ScaleSection';
 import AboutUsSection from '@/components/sections/AboutUsSection';
-import { useEffect } from 'react';
+import FaqSection from '@/components/sections/FaqSection';
 
 const Index = () => {
-  // Scroll to top when component mounts
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
-    <div className="min-h-screen bg-background">
+    <div className="bg-background">
       <Navbar />
-      <main>
-        <HeroSection />
+      <HeroSection />
+      <div className="relative">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none"></div>
         <AboutSection />
         <ServicesSection />
-        <ScaleSection />
-        <ResultsSection />
+        <ProcessSection />
         <ComparisonSection />
-        <AboutUsSection />
+        <ResultsSection />
+        <ScaleSection />
+        <FaqSection />
         <TestimonialsSection />
+        <AboutUsSection />
         <CtaSection />
-      </main>
+      </div>
       <Footer />
     </div>
   );

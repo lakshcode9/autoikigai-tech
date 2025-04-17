@@ -3,8 +3,31 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 
 const Footer = () => {
+  const { toast } = useToast();
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !email.includes('@')) {
+      toast({
+        title: "Please enter a valid email",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Here you would handle the actual subscription
+    toast({
+      title: "Thanks for subscribing!",
+      description: "You'll receive our updates soon."
+    });
+    setEmail("");
+  };
+
   return (
     <footer className="bg-card py-16 px-6 border-t border-white/5">
       <div className="container mx-auto">
@@ -45,25 +68,28 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-xl mb-6">Resources</h3>
             <ul className="space-y-4">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Blog</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Case Studies</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Documentation</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Help Center</a></li>
+              <li><Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors">Blog</Link></li>
+              <li><Link to="/case-studies" className="text-muted-foreground hover:text-foreground transition-colors">Case Studies</Link></li>
+              <li><Link to="/documentation" className="text-muted-foreground hover:text-foreground transition-colors">Documentation</Link></li>
+              <li><Link to="/help-center" className="text-muted-foreground hover:text-foreground transition-colors">Help Center</Link></li>
             </ul>
           </div>
           
           <div className="lg:col-span-1">
             <h3 className="font-semibold text-xl mb-6">Subscribe to Our Newsletter</h3>
             <p className="text-muted-foreground mb-4">Stay updated with the latest tech trends and company news.</p>
-            <div className="flex">
+            <form onSubmit={handleSubscribe} className="flex">
               <Input
                 placeholder="Enter your email"
                 className="rounded-r-none bg-secondary/50 border-white/5"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <Button type="submit" className="rounded-l-none button-gradient">
                 <Send size={16} />
               </Button>
-            </div>
+            </form>
           </div>
         </div>
         
@@ -71,7 +97,7 @@ const Footer = () => {
           <p>© {new Date().getFullYear()} autoikigai.tech. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/terms-policy" className="hover:text-foreground transition-colors">Terms & Privacy Policy</Link>
-            <a href="#" className="hover:text-foreground transition-colors">Cookie Policy</a>
+            <Link to="/cookie-policy" className="hover:text-foreground transition-colors">Cookie Policy</Link>
             <a href="https://lakshpujary.me" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
               View our founder's portfolio
             </a>

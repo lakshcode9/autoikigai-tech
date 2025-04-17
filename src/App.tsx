@@ -9,6 +9,12 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Careers from "./pages/Careers";
 import TermsPolicy from "./pages/TermsPolicy";
+import Blog from "./pages/Blog";
+import CaseStudies from "./pages/CaseStudies";
+import Documentation from "./pages/Documentation";
+import HelpCenter from "./pages/HelpCenter";
+import CookiePolicy from "./pages/CookiePolicy";
+import JobApplication from "./pages/JobApplication";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -36,9 +42,14 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/careers/:jobId" element={<JobApplication />} />
           <Route path="/terms-policy" element={<TermsPolicy />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/documentation" element={<Documentation />} />
+          <Route path="/help-center" element={<HelpCenter />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/about" element={<NotFound />} />
-          <Route path="/case-studies" element={<NotFound />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
