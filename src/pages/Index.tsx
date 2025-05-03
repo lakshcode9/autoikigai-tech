@@ -15,6 +15,18 @@ import AboutUsSection from '@/components/sections/AboutUsSection';
 import FaqSection from '@/components/sections/FaqSection';
 
 const Index = () => {
+  // Add cal.com script
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://cal.com/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="bg-background w-full overflow-hidden">
       <Navbar />
@@ -30,7 +42,7 @@ const Index = () => {
         <FaqSection />
         <TestimonialsSection />
         <AboutUsSection />
-        <CtaSection />
+        <CtaSection calLink="https://cal.com/laksh-pujary-7lvydw/15min" />
       </div>
       <Footer />
     </div>

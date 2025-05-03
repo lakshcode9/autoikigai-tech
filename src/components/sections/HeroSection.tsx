@@ -26,19 +26,19 @@ const HeroSection = () => {
           </ScrollReveal>
           
           <ScrollReveal animation="fade" delay={100}>
-            <h1 className="text-gradient text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-bold max-w-4xl leading-tight mb-4 md:mb-6">
+            <h1 className="text-gradient text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-bold max-w-4xl leading-tight mb-4 md:mb-6 text-center">
               Growth systems for B2B leaders who don't do guesswork.
             </h1>
           </ScrollReveal>
           
           <ScrollReveal animation="fade" delay={200}>
-            <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mb-6 md:mb-10">
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mb-6 md:mb-10 text-center">
               Autoikigai.tech delivers cutting-edge technology solutions that transform your business operations, enhance customer experiences, and drive growth in the digital age.
             </p>
           </ScrollReveal>
           
           <ScrollReveal animation="scale" delay={300} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Link to="/contact">
+            <Link to="/about">
               <Button size={isMobile ? "default" : "lg"} className="button-gradient w-full sm:w-auto">
                 Get Started
                 <ArrowRightIcon className="ml-2 h-4 w-4" />

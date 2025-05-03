@@ -1,43 +1,62 @@
 
-import ScrollReveal from "../animations/ScrollReveal";
+import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRightIcon, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowRightIcon } from "lucide-react";
+import ScrollReveal from "../animations/ScrollReveal";
 
-const CtaSection = () => {
+interface CtaSectionProps {
+  calLink?: string;
+}
+
+const CtaSection: React.FC<CtaSectionProps> = ({ calLink }) => {
+  const handleScheduleClick = () => {
+    if (calLink) {
+      // @ts-ignore - Cal is added via script
+      window.Cal?.showModal({ calLink });
+    }
+  };
+
   return (
-    <section className="section">
-      <div className="container mx-auto">
-        <ScrollReveal>
-          <div className="rounded-3xl overflow-hidden border border-white/10 relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/20 to-brand-purple/20"></div>
-            <div className="grid-pattern absolute inset-0 opacity-30"></div>
+    <section id="cta" className="section relative overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
+          <ScrollReveal animation="fade">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-gradient">
+              Ready to Transform Your Business with Advanced Tech Solutions?
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal animation="fade" delay={100}>
+            <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl">
+              Schedule a consultation with our experts to discover how our solutions can drive growth and efficiency for your business.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal animation="fade" delay={200} className="flex flex-col sm:flex-row gap-4">
+            <Button 
+              size="lg" 
+              className="button-gradient" 
+              onClick={handleScheduleClick}
+            >
+              Schedule a Consultation
+              <ArrowRightIcon className="ml-2 h-4 w-4" />
+            </Button>
             
-            <div className="relative z-10 py-16 px-8 md:py-24 md:px-12 text-center max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                Ready to Transform Your Business with <span className="text-gradient">Technology?</span>
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8 md:mb-10">
-                Contact us today to discuss how our innovative solutions can help you achieve your business objectives and stay ahead of the competition.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact">
-                  <Button size="lg" className="button-gradient">
-                    Get in Touch
-                    <ArrowRightIcon className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-                <a href="https://lakshpujary.me" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" variant="outline">
-                    View Our Founder's Portfolio
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </Button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </ScrollReveal>
+            <a href="https://cal.com/laksh-pujary-7lvydw/15min" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="gap-2">
+                Learn our targeting strategy
+                <ArrowRightIcon className="h-4 w-4" />
+              </Button>
+            </a>
+          </ScrollReveal>
+        </div>
       </div>
+
+      {/* Background gradient */}
+      <div className="absolute -bottom-24 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent z-10"></div>
+      
+      {/* Background elements */}
+      <div className="absolute -bottom-1/2 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-brand-blue/10 blur-3xl -z-10"></div>
     </section>
   );
 };

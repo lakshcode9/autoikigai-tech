@@ -15,6 +15,7 @@ import Documentation from "./pages/Documentation";
 import HelpCenter from "./pages/HelpCenter";
 import CookiePolicy from "./pages/CookiePolicy";
 import JobApplication from "./pages/JobApplication";
+import About from "./pages/About";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -49,7 +50,7 @@ const App = () => (
           <Route path="/documentation" element={<Documentation />} />
           <Route path="/help-center" element={<HelpCenter />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
-          <Route path="/about" element={<NotFound />} />
+          <Route path="/about" element={<About />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
