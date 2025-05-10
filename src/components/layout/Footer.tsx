@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react";
@@ -72,7 +71,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-1">
             <div className="font-bold text-2xl text-gradient mb-4">
-              autoikigai.tech
+              autoikigai.systems
             </div>
             <p className="text-muted-foreground mb-6">
               Transforming businesses through innovative technology solutions and AI-powered automation.
@@ -140,7 +139,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} autoikigai.tech. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} autoikigai.systems. All rights reserved.</p>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-4 md:mt-0">
             <Link to="/terms-policy" className="hover:text-foreground transition-colors">Terms & Privacy Policy</Link>
             <Link to="/cookie-policy" className="hover:text-foreground transition-colors">Cookie Policy</Link>

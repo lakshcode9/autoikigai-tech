@@ -50,7 +50,7 @@ const ServicesSection = () => {
     },
     {
       title: "Faster Revenue Generation:",
-      description: "By targeting only the most relevant prospects, the autoikigai.tech Method shortens the sales cycle, helping you close deals quicker and get cash flowing faster, accelerating revenue growth."
+      description: "By targeting only the most relevant prospects, the autoikigai.systems Method shortens the sales cycle, helping you close deals quicker and get cash flowing faster, accelerating revenue growth."
     }
   ];
 
@@ -90,7 +90,7 @@ const ServicesSection = () => {
           </div>
 
           <div className="space-y-4 md:space-y-6 bg-card border border-white/10 p-4 md:p-6 rounded-lg">
-            <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4 break-words">The "autoikigai.tech Way"</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4 break-words">The "autoikigai.systems Way"</h3>
             <p className="text-muted-foreground mb-4 md:mb-6">Let's target companies struggling with digital transformation or looking to implement AI solutions in their operations.</p>
             
             <div className="space-y-4 md:space-y-6">

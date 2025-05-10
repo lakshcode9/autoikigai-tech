@@ -27,7 +27,7 @@ const Navbar = () => {
     >
       <div className="container flex justify-between items-center">
         <Link to="/" className="font-bold text-2xl text-gradient">
-          autoikigai.tech
+          autoikigai.systems
         </Link>
         
         {/* Desktop Navigation */}
