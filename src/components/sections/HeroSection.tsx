@@ -39,10 +39,10 @@ const HeroSection = () => {
           </ScrollReveal>
           
           <ScrollReveal animation="scale" delay={300} className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-lg mx-auto">
-            <Link to="/sales-system" className="w-full sm:w-auto">
+            <Link to="/solutions" className="w-full sm:w-auto">
               <Button size={isMobile ? "default" : "lg"} className="button-gradient w-full h-12 sm:h-14 text-base">
                 <span className="flex items-center justify-center w-full">
-                  View Sales System
+                  View Solutions
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </span>
               </Button>

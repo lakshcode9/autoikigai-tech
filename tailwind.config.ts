@@ -138,10 +138,10 @@ export default {
 				'slide-in-right': 'slide-in-right 0.7s ease-out'
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
+				sans: ['Söhne', 'Inter', 'sans-serif'],
 				mono: ['IBM Plex Mono', 'monospace'],
-				display: ['"Playfair Display"', 'serif'],
-				heading: ['"Montserrat"', 'sans-serif']
+				display: ['Söhne', 'serif'],
+				heading: ['Söhne', 'sans-serif']
 			}
 		}
 	},

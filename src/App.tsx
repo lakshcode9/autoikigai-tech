@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -19,7 +19,6 @@ import About from "./pages/About";
 import SalesSystem from "./pages/SalesSystem";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import HeroSection from "./components/sections/HeroSection";
 
 // ScrollToTop component to ensure page scrolls to top on route change
 const ScrollToTop = () => {
@@ -43,6 +42,7 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/solutions" element={<SalesSystem />} />
           <Route path="/sales-system" element={<SalesSystem />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />

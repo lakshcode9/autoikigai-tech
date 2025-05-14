@@ -29,12 +29,12 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <div>
+        <FeaturesSection />
+        <CaseStudiesSection />
         <PricingSection
           pricingInterval={pricingInterval}
           setPricingInterval={setPricingInterval}
         />
-        <FeaturesSection />
-        <CaseStudiesSection />
         <TestimonialsSection />
         <CtaSection calLink="https://cal.com/laksh-pujary-7lvydw/15min" />
       </div>
