@@ -19,6 +19,7 @@ import About from "./pages/About";
 import SalesSystem from "./pages/SalesSystem";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import HeroSection from "./components/sections/HeroSection";
 
 // ScrollToTop component to ensure page scrolls to top on route change
 const ScrollToTop = () => {

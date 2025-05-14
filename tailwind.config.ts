@@ -58,9 +58,9 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				brand: {
-					'blue': '#9b87f5',
-					'cyan': '#1EAEDB',
-					'purple': '#7E69AB'
+					'blue': '#0056b3',
+					'cyan': '#00a7c9',
+					'purple': '#4e3f9e'
 				}
 			},
 			borderRadius: {
@@ -138,10 +138,10 @@ export default {
 				'slide-in-right': 'slide-in-right 0.7s ease-out'
 			},
 			fontFamily: {
-				sans: ['Joystix', 'sans-serif'],
+				sans: ['Inter', 'sans-serif'],
 				mono: ['IBM Plex Mono', 'monospace'],
-				'press-start': ['"Press Start 2P"', 'cursive'],
-				'vt323': ['"VT323"', 'monospace']
+				display: ['"Playfair Display"', 'serif'],
+				heading: ['"Montserrat"', 'sans-serif']
 			}
 		}
 	},
