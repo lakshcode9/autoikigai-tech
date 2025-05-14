@@ -25,10 +25,10 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="bg-background w-full overflow-hidden">
+    <div className="w-full overflow-hidden">
       <Navbar />
       <HeroSection />
-      <div>
+      <div className="bg-background">
         <FeaturesSection />
         <CaseStudiesSection />
         <PricingSection
