@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 
@@ -104,7 +104,7 @@ const PricingSection = ({ pricingInterval, setPricingInterval }: PricingProps) =
                   <a href="https://cal.com/laksh-pujary-7lvydw/15min" className="mt-auto w-full">
                     <Button className="w-full">
                       Start now
-                      <ArrowRightIcon className="ml-2 h-5 w-5" />
+                      <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </a>
                 </CardContent>
@@ -163,7 +163,7 @@ const PricingSection = ({ pricingInterval, setPricingInterval }: PricingProps) =
                   <a href="https://cal.com/laksh-pujary-7lvydw/15min" className="mt-auto w-full">
                     <Button className="w-full button-gradient">
                       Start now
-                      <ArrowRightIcon className="ml-2 h-5 w-5" />
+                      <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </a>
                 </CardContent>
