@@ -21,19 +21,19 @@ const HeroSection = () => {
         <div className="flex flex-col items-center justify-center text-center">
           <ScrollReveal delay={0} animation="fade">
             <span className="inline-block py-1 px-3 mb-4 md:mb-6 rounded-full bg-secondary text-xs md:text-sm font-medium text-foreground">
-              Welcome to autoikigai.systems
+              AI-Powered B2B Lead Generation
             </span>
           </ScrollReveal>
           
           <ScrollReveal animation="fade" delay={100}>
             <h1 className="text-gradient text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-bold max-w-3xl mx-auto leading-tight mb-4 md:mb-6 text-center">
-              New site coming soon
+              Increase Revenue with Automated Lead Generation
             </h1>
           </ScrollReveal>
           
           <ScrollReveal animation="fade" delay={200}>
             <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 md:mb-10 text-center">
-              We're currently building something awesome for you. In the meantime, check out our sales system solution.
+              Generate high-quality B2B leads with our AI-powered targeting system that focuses on real business pains
             </p>
           </ScrollReveal>
           
@@ -41,22 +41,22 @@ const HeroSection = () => {
             <Link to="/sales-system">
               <Button size={isMobile ? "default" : "lg"} className="button-gradient w-full sm:w-auto">
                 <span className="flex items-center justify-center w-full">
-                  Explore Sales System
+                  View Sales System
                   <ArrowRightIcon className="ml-2 h-4 w-4" />
                 </span>
               </Button>
             </Link>
             <Button size={isMobile ? "default" : "lg"} variant="outline" className="w-full sm:w-auto">
               <a href="https://cal.com/laksh-pujary-7lvydw/15min" className="flex items-center justify-center w-full">
-                Contact Us
+                Schedule a Demo
               </a>
             </Button>
           </ScrollReveal>
 
           <ParallaxItem className="mt-6 md:mt-12" speed={0.2}>
             <ScrollReveal animation="fade" delay={400}>
-              <Link to="/sales-system" className="flex flex-col items-center group">
-                <span className="text-xs md:text-sm text-muted-foreground mb-2">Explore our offerings</span>
+              <Link to="#pricing" className="flex flex-col items-center group">
+                <span className="text-xs md:text-sm text-muted-foreground mb-2">View Pricing</span>
                 <ArrowDownIcon className="h-5 w-5 md:h-6 md:w-6 animate-bounce text-primary" />
               </Link>
             </ScrollReveal>

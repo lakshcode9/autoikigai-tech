@@ -34,9 +34,9 @@ const Navbar = () => {
         <nav className="hidden md:flex items-center space-x-8">
           <ul className="flex space-x-8 font-medium">
             <li><Link to="/sales-system" className="hover:text-primary transition-colors">Sales System</Link></li>
+            <li><Link to="/case-studies" className="hover:text-primary transition-colors">Case Studies</Link></li>
             <li><Link to="/about" className="hover:text-primary transition-colors">About</Link></li>
             <li><Link to="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
-            <li><Link to="/case-studies" className="hover:text-primary transition-colors">Case Studies</Link></li>
           </ul>
           <Link to="/contact">
             <Button className="button-gradient">Contact Us</Button>
@@ -71,6 +71,15 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
+                  to="/case-studies"
+                  className="block py-2 hover:text-primary transition-colors"
+                  onClick={toggleMenu}
+                >
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/about"
                   className="block py-2 hover:text-primary transition-colors"
                   onClick={toggleMenu}
@@ -85,15 +94,6 @@ const Navbar = () => {
                   onClick={toggleMenu}
                 >
                   Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/case-studies"
-                  className="block py-2 hover:text-primary transition-colors"
-                  onClick={toggleMenu}
-                >
-                  Case Studies
                 </Link>
               </li>
               <li className="pt-4">

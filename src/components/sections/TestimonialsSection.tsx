@@ -1,62 +1,60 @@
 
-import ScrollReveal from "../animations/ScrollReveal";
-import { Card, CardContent } from "@/components/ui/card";
-import { QuoteIcon } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
+import React from 'react';
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import ScrollReveal from "@/components/animations/ScrollReveal";
+
+const testimonials = [
+  {
+    name: "Sarah Thompson",
+    role: "CEO, TechNova Solutions",
+    content: "The autoikigai.systems team transformed our lead generation process. With their AI-powered targeting system, we're now connecting with prospects who truly need our solutions. Our conversion rates have skyrocketed!",
+  },
+  {
+    name: "Michael Rodriguez",
+    role: "COO, Global Logistics Inc.",
+    content: "Working with Laksh and his team has been game-changing for our business. Their automation expertise allowed us to scale our operations without adding headcount, and their lead qualification system ensures we're focusing on the right opportunities.",
+  },
+  {
+    name: "Jennifer Wu",
+    role: "Marketing Director, FinEdge Capital",
+    content: "The customized CRM implementation and AI nurture systems have revolutionized how we manage client relationships. We're seeing higher retention rates and increased customer satisfaction across the board.",
+  },
+  {
+    name: "Robert Keller",
+    role: "VP of Sales, Quantum Software",
+    content: "I was skeptical about AI-powered lead generation at first, but the results speak for themselves. Our sales team is now focusing on qualified leads and closing deals faster than ever before.",
+  }
+];
 
 const TestimonialsSection = () => {
-  const isMobile = useIsMobile();
-  
-  const testimonials = [
-    {
-      quote: "Working with autoikigai.tech has transformed how we approach technology. Their AI solutions have increased our productivity by 40% in just three months.",
-      author: "Sarah Johnson",
-      position: "CTO, TechInnovate Inc."
-    },
-    {
-      quote: "The team's attention to detail and technical expertise is unmatched. They delivered a complex web application that exceeded our expectations and delighted our customers.",
-      author: "Michael Chen",
-      position: "Founder, DataFlow Systems"
-    },
-    {
-      quote: "autoikigai.tech doesn't just provide technology solutions – they become true partners in your business success. Their strategic insights were invaluable to our growth.",
-      author: "Elena Rodriguez",
-      position: "VP of Operations, Nexus Group"
-    }
-  ];
-
   return (
-    <section id="testimonials" className="section">
+    <section className="py-16 md:py-24 px-4 bg-secondary/5">
       <div className="container mx-auto">
-        <ScrollReveal animation="bottom">
-          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-            <span className="inline-block text-sm font-medium text-primary mb-3">
-              Testimonials
-            </span>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight">
-              What Our <span className="text-gradient">Clients Say</span> About Us
+        <div className="text-center mb-12">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+              What Our Clients Say
             </h2>
-            <p className="text-sm md:text-base text-muted-foreground">
-              Don't just take our word for it – hear from the businesses we've helped transform through technology and innovation.
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Trusted by forward-thinking companies to deliver exceptional automation solutions
             </p>
-          </div>
-        </ScrollReveal>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          </ScrollReveal>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((testimonial, index) => (
-            <ScrollReveal 
-              key={index} 
-              delay={index * 100} 
-              animation={isMobile ? "bottom" : index === 0 ? "left" : index === 1 ? "bottom" : "right"}
-              className="h-full"
-            >
-              <Card className="bg-secondary/50 border border-white/5 h-full group hover:border-primary/50 transition-all duration-300">
-                <CardContent className="p-6 md:p-8 flex flex-col h-full">
-                  <QuoteIcon className="h-8 w-8 md:h-10 md:w-10 text-primary mb-4 md:mb-6 group-hover:text-brand-cyan transition-colors duration-300" />
-                  <p className="text-base md:text-lg mb-6 md:mb-8 flex-grow">"{testimonial.quote}"</p>
+            <ScrollReveal key={index} delay={index * 100}>
+              <Card className="h-full bg-card/50 border-white/5">
+                <CardHeader className="pb-2">
+                  <div className="flex items-center mb-2">
+                    <div className="h-1 w-12 bg-primary rounded-full"></div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="mb-6 text-lg italic">"{testimonial.content}"</p>
                   <div>
-                    <p className="font-semibold">{testimonial.author}</p>
-                    <p className="text-xs md:text-sm text-muted-foreground">{testimonial.position}</p>
+                    <p className="font-bold">{testimonial.name}</p>
+                    <p className="text-muted-foreground">{testimonial.role}</p>
                   </div>
                 </CardContent>
               </Card>
