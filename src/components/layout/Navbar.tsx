@@ -33,10 +33,10 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <ul className="flex space-x-8 font-medium">
-            <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
-            <li><a href="#services" className="hover:text-primary transition-colors">Services</a></li>
-            <li><a href="#process" className="hover:text-primary transition-colors">Process</a></li>
-            <li><a href="#testimonials" className="hover:text-primary transition-colors">Testimonials</a></li>
+            <li><Link to="/sales-system" className="hover:text-primary transition-colors">Sales System</Link></li>
+            <li><Link to="/about" className="hover:text-primary transition-colors">About</Link></li>
+            <li><Link to="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
+            <li><Link to="/case-studies" className="hover:text-primary transition-colors">Case Studies</Link></li>
           </ul>
           <Link to="/contact">
             <Button className="button-gradient">Contact Us</Button>
@@ -61,40 +61,40 @@ const Navbar = () => {
           <nav className="container py-8">
             <ul className="flex flex-col space-y-6 text-xl">
               <li>
-                <a 
-                  href="#about" 
+                <Link
+                  to="/sales-system"
+                  className="block py-2 hover:text-primary transition-colors"
+                  onClick={toggleMenu}
+                >
+                  Sales System
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
                   className="block py-2 hover:text-primary transition-colors"
                   onClick={toggleMenu}
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#services" 
+                <Link
+                  to="/blog"
                   className="block py-2 hover:text-primary transition-colors"
                   onClick={toggleMenu}
                 >
-                  Services
-                </a>
+                  Blog
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#process" 
+                <Link
+                  to="/case-studies"
                   className="block py-2 hover:text-primary transition-colors"
                   onClick={toggleMenu}
                 >
-                  Process
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#testimonials" 
-                  className="block py-2 hover:text-primary transition-colors"
-                  onClick={toggleMenu}
-                >
-                  Testimonials
-                </a>
+                  Case Studies
+                </Link>
               </li>
               <li className="pt-4">
                 <Link to="/contact" onClick={toggleMenu}>

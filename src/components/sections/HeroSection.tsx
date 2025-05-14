@@ -4,6 +4,7 @@ import ScrollReveal from "../animations/ScrollReveal";
 import ParallaxItem from "../animations/ParallaxItem";
 import { ArrowRightIcon, ArrowDownIcon } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const isMobile = useIsMobile();
@@ -20,51 +21,44 @@ const HeroSection = () => {
         <div className="flex flex-col items-center justify-center text-center">
           <ScrollReveal delay={0} animation="fade">
             <span className="inline-block py-1 px-3 mb-4 md:mb-6 rounded-full bg-secondary text-xs md:text-sm font-medium text-foreground">
-              Transforming Ideas into Digital Realities
+              Welcome to autoikigai.systems
             </span>
           </ScrollReveal>
           
           <ScrollReveal animation="fade" delay={100}>
             <h1 className="text-gradient text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-bold max-w-3xl mx-auto leading-tight mb-4 md:mb-6 text-center">
-              Growth systems for B2B leaders who don't do guesswork.
+              New site coming soon
             </h1>
           </ScrollReveal>
           
           <ScrollReveal animation="fade" delay={200}>
             <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 md:mb-10 text-center">
-              Autoikigai.tech delivers cutting-edge technology solutions that transform your business operations, enhance customer experiences, and drive growth in the digital age.
+              We're currently building something awesome for you. In the meantime, check out our sales system solution.
             </p>
           </ScrollReveal>
           
           <ScrollReveal animation="scale" delay={300} className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md mx-auto">
-            <Button size={isMobile ? "default" : "lg"} className="button-gradient w-full sm:w-auto">
-              <a href="#about" className="flex items-center justify-center w-full">
-                Get Started
-                <ArrowRightIcon className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
+            <Link to="/sales-system">
+              <Button size={isMobile ? "default" : "lg"} className="button-gradient w-full sm:w-auto">
+                <span className="flex items-center justify-center w-full">
+                  Explore Sales System
+                  <ArrowRightIcon className="ml-2 h-4 w-4" />
+                </span>
+              </Button>
+            </Link>
             <Button size={isMobile ? "default" : "lg"} variant="outline" className="w-full sm:w-auto">
               <a href="https://cal.com/laksh-pujary-7lvydw/15min" className="flex items-center justify-center w-full">
-                Learn More
-              </a>
-            </Button>
-          </ScrollReveal>
-
-          <ScrollReveal animation="fade" delay={400} className="mt-6 mb-2">
-            <Button variant="link" className="text-muted-foreground hover:text-primary">
-              <a href="#about" className="flex items-center">
-                Learn our targeting strategy
-                <ArrowDownIcon className="ml-2 h-4 w-4" />
+                Contact Us
               </a>
             </Button>
           </ScrollReveal>
 
           <ParallaxItem className="mt-6 md:mt-12" speed={0.2}>
             <ScrollReveal animation="fade" delay={400}>
-              <a href="#about" className="flex flex-col items-center group">
-                <span className="text-xs md:text-sm text-muted-foreground mb-2">Scroll to explore</span>
+              <Link to="/sales-system" className="flex flex-col items-center group">
+                <span className="text-xs md:text-sm text-muted-foreground mb-2">Explore our offerings</span>
                 <ArrowDownIcon className="h-5 w-5 md:h-6 md:w-6 animate-bounce text-primary" />
-              </a>
+              </Link>
             </ScrollReveal>
           </ParallaxItem>
         </div>
