@@ -36,13 +36,13 @@ const SalesSystem = () => {
       <div className="relative pt-16 md:pt-20">
         <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none"></div>
         
-        {/* Add a new intro section highlighting the affordable nature of Sales System */}
+        {/* Sales System intro section */}
         <section className="pt-24 md:pt-32 pb-12 md:pb-16 px-4 md:px-6">
           <div className="container mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <ScrollReveal delay={0}>
                 <span className="inline-block py-1 px-3 mb-4 rounded-full bg-secondary/20 text-sm font-medium text-secondary">
-                  Affordable Solution
+                  Sales System
                 </span>
               </ScrollReveal>
               
@@ -54,7 +54,7 @@ const SalesSystem = () => {
               
               <ScrollReveal delay={200}>
                 <p className="text-lg text-muted-foreground dark:text-gray-300 mb-8">
-                  An accessible, low-ticket solution for businesses looking to improve their sales process without enterprise-level investment.
+                  An accessible solution for businesses looking to improve their sales process efficiently.
                 </p>
               </ScrollReveal>
               
@@ -73,13 +73,13 @@ const SalesSystem = () => {
             <ScrollReveal delay={400}>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-card/50 p-6 rounded-lg border border-white/10">
-                  <h3 className="text-xl font-bold mb-3">Affordable Pricing</h3>
-                  <p className="text-muted-foreground">Designed to fit smaller budgets while still delivering excellent results</p>
+                  <h3 className="text-xl font-bold mb-3">Accessible Pricing</h3>
+                  <p className="text-muted-foreground">Designed to fit various budgets while still delivering excellent results</p>
                 </div>
                 
                 <div className="bg-card/50 p-6 rounded-lg border border-white/10">
                   <h3 className="text-xl font-bold mb-3">Streamlined Features</h3>
-                  <p className="text-muted-foreground">Core functionality without the complexity of enterprise solutions</p>
+                  <p className="text-muted-foreground">Core functionality focused on what matters most to your business</p>
                 </div>
                 
                 <div className="bg-card/50 p-6 rounded-lg border border-white/10">

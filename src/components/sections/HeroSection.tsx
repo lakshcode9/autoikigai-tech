@@ -35,7 +35,7 @@ const HeroSection = () => {
           
           <ScrollReveal animation="fade" delay={200}>
             <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground dark:text-gray-300 max-w-3xl mx-auto mb-8 md:mb-12">
-              From affordable sales systems to comprehensive enterprise solutions, we generate high-quality leads for businesses at every scale
+              From complete automation systems to comprehensive enterprise solutions, we generate high-quality leads for businesses at every scale
             </p>
           </ScrollReveal>
           

@@ -36,21 +36,21 @@ const Index = () => {
                 Our Offerings
               </span>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight">
-                Solutions for Every Business Size
+                Solutions for Every Business
               </h2>
               <p className="text-muted-foreground">
-                Choose the right solution for your business needs and budget
+                Choose the right solution for your business needs
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-card/50 border border-white/10 p-6 md:p-8 rounded-lg">
                 <div className="mb-4 inline-block py-1 px-3 rounded-full bg-secondary/20 text-sm font-medium text-secondary">
-                  Low-Ticket
+                  Sales System
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-3">Sales System</h3>
                 <p className="text-muted-foreground mb-6">
-                  Our affordable solution designed for businesses looking to improve their sales process without enterprise-level investment.
+                  Our accessible solution designed for businesses looking to improve their sales process efficiently.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-2">
@@ -84,7 +84,7 @@ const Index = () => {
                   RECOMMENDED
                 </div>
                 <div className="mb-4 inline-block py-1 px-3 rounded-full bg-primary/20 text-sm font-medium text-primary">
-                  High-Ticket
+                  Enterprise
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-3">Enterprise Solutions</h3>
                 <p className="text-muted-foreground mb-6">

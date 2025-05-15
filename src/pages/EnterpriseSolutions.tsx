@@ -10,8 +10,11 @@ import ResultsSection from '@/components/sections/ResultsSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CtaSection from '@/components/sections/CtaSection';
 import FaqSection from '@/components/sections/FaqSection';
+import PricingSection from '@/components/sections/PricingSection';
 
 const EnterpriseSolutions = () => {
+  const [pricingInterval, setPricingInterval] = React.useState<'monthly' | 'annual'>('monthly');
+  
   // Add cal.com script
   React.useEffect(() => {
     const script = document.createElement('script');
@@ -116,6 +119,10 @@ const EnterpriseSolutions = () => {
         
         <ServicesSection />
         <ComparisonSection />
+        <PricingSection 
+          pricingInterval={pricingInterval}
+          setPricingInterval={setPricingInterval}
+        />
         <ResultsSection />
         <FaqSection />
         <TestimonialsSection />
