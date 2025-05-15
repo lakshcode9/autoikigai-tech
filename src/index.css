@@ -41,6 +41,36 @@
     --radius: 0.4rem;
   }
 
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 210 40% 98%;
+    
+    --card: 224 71% 6%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 224 71% 6%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 210 40% 80%;
+    --primary-foreground: 222 47% 30%;
+    
+    --secondary: 215 25% 27%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 223 47% 14%;
+    --muted-foreground: 215 20% 70%;
+    
+    --accent: 223 47% 14%;
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 223 47% 14%;
+    --input: 223 47% 14%;
+    --ring: 224 76% 48%;
+  }
+
   * {
     @apply border-border;
     box-sizing: border-box;
@@ -92,10 +122,19 @@
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
                      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   }
+  
+  .dark .grid-pattern {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                     linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
 
   .pixel-border {
     box-shadow: 0 0 0 2px #fff, 0 0 0 4px #1A1F2C;
     position: relative;
+  }
+  
+  .dark .pixel-border {
+    box-shadow: 0 0 0 2px #1A1F2C, 0 0 0 4px #fff;
   }
 
   .crt-effect::before {
@@ -132,6 +171,20 @@
   
   .status-dot {
     @apply h-2.5 w-2.5 rounded-full;
+  }
+
+  /* Glass effect for dark mode */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-lg border border-white/10 rounded-lg shadow-lg;
+  }
+
+  .dark .glass-card {
+    @apply bg-black/30 backdrop-blur-lg border border-white/5;
+  }
+
+  /* Dark mode specific styles */
+  .dark .button-gradient {
+    @apply bg-gradient-to-r from-brand-purple to-brand-blue hover:from-brand-blue hover:to-brand-cyan;
   }
 
   /* New animation classes */

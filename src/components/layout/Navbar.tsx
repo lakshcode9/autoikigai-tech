@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,19 +39,25 @@ const Navbar = () => {
             <li><Link to="/about" className="text-foreground hover:text-primary transition-colors">About</Link></li>
             <li><Link to="/blog" className="text-foreground hover:text-primary transition-colors">Blog</Link></li>
           </ul>
-          <Link to="/contact">
-            <Button className="button-gradient h-11">Contact Us</Button>
-          </Link>
+          <div className="flex items-center space-x-4">
+            <ThemeToggle />
+            <Link to="/contact">
+              <Button className="button-gradient h-11">Contact Us</Button>
+            </Link>
+          </div>
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-foreground"
-          onClick={toggleMenu}
-          aria-label="Toggle Menu"
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center gap-4">
+          <ThemeToggle />
+          <button 
+            className="text-foreground"
+            onClick={toggleMenu}
+            aria-label="Toggle Menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
 
         {/* Mobile Navigation */}
         <div 
