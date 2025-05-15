@@ -138,10 +138,10 @@ export default {
 				'slide-in-right': 'slide-in-right 0.7s ease-out'
 			},
 			fontFamily: {
-				sans: ['Söhne', 'Inter', 'sans-serif'],
+				sans: ['Plus Jakarta Sans', 'Söhne', 'Inter', 'sans-serif'],
 				mono: ['IBM Plex Mono', 'monospace'],
-				display: ['Söhne', 'serif'],
-				heading: ['Söhne', 'sans-serif']
+				display: ['Playfair Display', 'serif'],
+				heading: ['Plus Jakarta Sans', 'Söhne', 'sans-serif']
 			}
 		}
 	},

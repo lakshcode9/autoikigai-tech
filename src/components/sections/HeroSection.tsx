@@ -41,7 +41,7 @@ const HeroSection = () => {
           
           <ScrollReveal animation="scale" delay={300} className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-lg mx-auto">
             <Link to="/solutions" className="w-full sm:w-auto">
-              <Button size={isMobile ? "default" : "lg"} className="bg-primary text-primary-foreground hover:bg-primary/90 w-full h-12 sm:h-14 text-base font-medium">
+              <Button size={isMobile ? "default" : "lg"} className="bg-primary text-white hover:bg-primary/90 w-full h-12 sm:h-14 text-base font-medium">
                 <span className="flex items-center justify-center w-full">
                   View Solutions
                   <ArrowRight className="ml-2 h-5 w-5" />
