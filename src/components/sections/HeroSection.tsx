@@ -35,7 +35,7 @@ const HeroSection = () => {
           
           <ScrollReveal animation="fade" delay={200}>
             <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground dark:text-gray-300 max-w-3xl mx-auto mb-8 md:mb-12">
-              Advanced automation and precision targeting systems to generate high-quality leads for mid-market and enterprise businesses
+              From affordable sales systems to comprehensive enterprise solutions, we generate high-quality leads for businesses at every scale
             </p>
           </ScrollReveal>
           
@@ -43,18 +43,18 @@ const HeroSection = () => {
             <Link to="/solutions" className="w-full sm:w-auto">
               <Button size={isMobile ? "default" : "lg"} className="bg-primary text-white hover:bg-primary/90 w-full h-12 sm:h-14 text-base font-medium">
                 <span className="flex items-center justify-center w-full">
-                  View Solutions
+                  Enterprise Solutions
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </span>
               </Button>
             </Link>
-            <a href="https://cal.com/laksh-pujary-7lvydw/15min" className="w-full sm:w-auto">
+            <Link to="/sales-system" className="w-full sm:w-auto">
               <Button size={isMobile ? "default" : "lg"} variant="outline" className="w-full h-12 sm:h-14 text-base border-primary/20 text-foreground hover:border-primary/50 hover:bg-primary/5">
                 <span className="flex items-center justify-center w-full">
-                  Schedule a Demo
+                  Sales System
                 </span>
               </Button>
-            </a>
+            </Link>
           </ScrollReveal>
         </div>
       </div>
