@@ -8,6 +8,7 @@ import CaseStudiesSection from '@/components/sections/CaseStudiesSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CtaSection from '@/components/sections/CtaSection';
 import HeroSection from '@/components/sections/HeroSection';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const [pricingInterval, setPricingInterval] = useState<'monthly' | 'annual'>('monthly');
@@ -72,11 +73,11 @@ const Index = () => {
                     <span>Standard reporting</span>
                   </li>
                 </ul>
-                <a href="/sales-system" className="inline-block w-full">
+                <Link to="/sales-system" className="inline-block w-full">
                   <button className="w-full py-2 px-4 border-2 border-secondary/30 text-foreground rounded-md hover:bg-secondary/10 transition-colors text-center">
                     Learn More
                   </button>
-                </a>
+                </Link>
               </div>
               
               <div className="bg-primary/5 border border-primary/20 p-6 md:p-8 rounded-lg relative overflow-hidden">
@@ -116,11 +117,11 @@ const Index = () => {
                     <span>Comprehensive analytics</span>
                   </li>
                 </ul>
-                <a href="/solutions" className="inline-block w-full">
+                <Link to="/enterprise" className="inline-block w-full">
                   <button className="w-full py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors text-center">
                     Learn More
                   </button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

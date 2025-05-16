@@ -3,14 +3,13 @@ import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import ScrollReveal from '@/components/animations/ScrollReveal';
-import { Button } from '@/components/ui/button';
 import PricingSection from '@/components/sections/PricingSection';
 import FaqSection from '@/components/sections/FaqSection';
 
 const EnterpriseSolutions = () => {
   const [pricingInterval, setPricingInterval] = React.useState<'monthly' | 'annual'>('monthly');
   
-  // Add cal.com script
+  // Add cal.com script - fixed to ensure proper cleanup
   React.useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://cal.com/embed.js';
@@ -18,7 +17,9 @@ const EnterpriseSolutions = () => {
     document.body.appendChild(script);
     
     return () => {
-      document.body.removeChild(script);
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
     };
   }, []);
 
