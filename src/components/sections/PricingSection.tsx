@@ -105,7 +105,7 @@ const PricingSection = ({ pricingInterval, setPricingInterval }: PricingProps) =
                     </li>
                   </ul>
                   
-                  <a href="https://cal.com/laksh-pujary-7lvydw/15min" className="mt-auto w-full">
+                  <a href="https://tally.so/r/w85kvz" className="mt-auto w-full">
                     <Button className="w-full h-12 bg-primary hover:bg-primary/90">
                       Schedule Consultation
                       <ArrowRight className="ml-2 h-5 w-5" />
@@ -172,7 +172,7 @@ const PricingSection = ({ pricingInterval, setPricingInterval }: PricingProps) =
                     </li>
                   </ul>
                   
-                  <a href="https://cal.com/laksh-pujary-7lvydw/15min" className="mt-auto w-full">
+                  <a href="https://tally.so/r/w85kvz" className="mt-auto w-full">
                     <Button className="w-full h-12 button-gradient">
                       Schedule Consultation
                       <ArrowRight className="ml-2 h-5 w-5" />
