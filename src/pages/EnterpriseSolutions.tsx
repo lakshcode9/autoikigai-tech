@@ -5,13 +5,11 @@ import Footer from '@/components/layout/Footer';
 import ScrollReveal from '@/components/animations/ScrollReveal';
 import PricingSection from '@/components/sections/PricingSection';
 import FaqSection from '@/components/sections/FaqSection';
+import CtaSection from '@/components/sections/CtaSection';
 
 const EnterpriseSolutions = () => {
   const [pricingInterval, setPricingInterval] = React.useState<'monthly' | 'annual'>('monthly');
   
-  // Remove cal.com script as we're now using Tally.so
-  // We don't need a script for Tally.so links as they're direct URLs
-
   return (
     <div className="bg-background w-full overflow-hidden">
       <Navbar />
@@ -48,6 +46,7 @@ const EnterpriseSolutions = () => {
           setPricingInterval={setPricingInterval}
         />
         <FaqSection />
+        <CtaSection calLink="https://tally.so/r/w85kvz" />
       </div>
       <Footer />
     </div>

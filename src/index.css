@@ -94,6 +94,15 @@
   .section {
     @apply py-16 md:py-24 px-4 md:px-8 overflow-hidden;
   }
+  
+  /* Improved contrast for links */
+  a {
+    @apply transition-colors duration-200;
+  }
+  
+  .dark a:not(.btn):not([class*='bg-']) {
+    @apply hover:text-primary-foreground;
+  }
 }
 
 @layer components {
@@ -128,102 +137,19 @@
                      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   }
 
-  .pixel-border {
-    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #1A1F2C;
-    position: relative;
-  }
-  
-  .dark .pixel-border {
-    box-shadow: 0 0 0 2px #1A1F2C, 0 0 0 4px #fff;
-  }
-
-  .crt-effect::before {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
-                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-    z-index: 2;
-    background-size: 100% 2px, 3px 100%;
-    pointer-events: none;
-    opacity: 0.4;
-  }
-
-  .retro-card {
-    @apply border-2 border-white/20 rounded-md bg-secondary/50 p-4 hover:border-primary/50 transition-all duration-300;
-  }
-
-  .retro-button {
-    @apply flex items-center justify-center px-4 py-2 text-sm border-2 border-white/20 hover:border-primary/50 transition-colors bg-black/30;
-  }
-
-  .inbox-item {
-    @apply border-l-4 border-transparent hover:border-primary bg-black/30 transition-all duration-200 p-2 flex items-center space-x-3 cursor-pointer;
-  }
-  
-  .inbox-item:hover {
-    @apply bg-black/50;
-  }
-  
-  .status-dot {
-    @apply h-2.5 w-2.5 rounded-full;
-  }
-
-  /* Glass effect for dark mode */
+  /* Glass card effect for better visibility */
   .glass-card {
-    @apply bg-white/10 backdrop-blur-lg border border-white/10 rounded-lg shadow-lg;
-  }
-
-  .dark .glass-card {
-    @apply bg-black/30 backdrop-blur-lg border border-white/5;
-  }
-
-  /* Dark mode specific styles */
-  .dark .button-gradient {
-    @apply bg-gradient-to-r from-brand-purple to-brand-blue hover:from-brand-blue hover:to-brand-cyan;
-  }
-
-  /* New animation classes */
-  .come-in-left {
-    @apply -translate-x-full opacity-0 transition-all duration-700;
+    @apply backdrop-blur-md bg-white/90 dark:bg-black/50 border border-white/20 dark:border-white/10 shadow-lg rounded-xl;
   }
   
-  .come-in-right {
-    @apply translate-x-full opacity-0 transition-all duration-700;
+  /* Improved button styles for better visibility */
+  .button-gradient {
+    @apply shadow-md font-medium;
   }
   
-  .come-in-bottom {
-    @apply translate-y-full opacity-0 transition-all duration-700;
-  }
-  
-  .come-in-top {
-    @apply -translate-y-full opacity-0 transition-all duration-700;
-  }
-  
-  .fade-in {
-    @apply opacity-0 transition-opacity duration-700;
-  }
-  
-  .scale-in {
-    @apply scale-75 opacity-0 transition-all duration-700;
-  }
-  
-  .rotate-in {
-    @apply rotate-90 opacity-0 transition-all duration-700;
-  }
-  
-  .come-in-left.is-visible,
-  .come-in-right.is-visible,
-  .come-in-bottom.is-visible,
-  .come-in-top.is-visible,
-  .fade-in.is-visible,
-  .scale-in.is-visible,
-  .rotate-in.is-visible {
-    @apply translate-x-0 translate-y-0 rotate-0 scale-100 opacity-100;
+  /* Improved card styles */
+  .card {
+    @apply shadow-md dark:shadow-lg rounded-lg transition-all duration-300;
   }
 
   /* Mobile optimizations */

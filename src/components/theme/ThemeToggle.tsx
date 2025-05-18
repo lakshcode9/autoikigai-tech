@@ -29,7 +29,7 @@ export function ThemeToggle() {
         className="data-[state=checked]:bg-primary data-[state=unchecked]:bg-accent"
         aria-label="Toggle theme"
       />
-      <Button variant="ghost" size="icon" onClick={toggleTheme} className="hidden md:flex">
+      <Button variant="outline" size="icon" onClick={toggleTheme} className="hidden md:flex border border-border hover:bg-muted">
         {theme === "dark" ? (
           <Sun className="h-5 w-5 text-yellow-300" />
         ) : (

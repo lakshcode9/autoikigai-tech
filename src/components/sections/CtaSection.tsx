@@ -12,7 +12,7 @@ const CtaSection: React.FC<CtaSectionProps> = ({ calLink = "https://tally.so/r/w
   return (
     <section id="cta" className="section relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
+        <div className="glass-card p-6 md:p-10 flex flex-col items-center text-center max-w-3xl mx-auto">
           <ScrollReveal animation="fade">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-gradient">
               Ready to Transform Your Business with Advanced Tech Solutions?
@@ -25,11 +25,11 @@ const CtaSection: React.FC<CtaSectionProps> = ({ calLink = "https://tally.so/r/w
             </p>
           </ScrollReveal>
 
-          <ScrollReveal animation="fade" delay={200} className="flex flex-col sm:flex-row gap-4">
+          <ScrollReveal animation="fade" delay={200} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <a href={calLink} target="_blank" rel="noopener noreferrer">
               <Button 
                 size="lg" 
-                className="button-gradient"
+                className="button-gradient w-full sm:w-auto"
               >
                 Schedule a Consultation
                 <ArrowRightIcon className="ml-2 h-4 w-4" />
@@ -37,7 +37,7 @@ const CtaSection: React.FC<CtaSectionProps> = ({ calLink = "https://tally.so/r/w
             </a>
             
             <a href={calLink} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="gap-2">
+              <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto">
                 Learn our targeting strategy
                 <ArrowRightIcon className="h-4 w-4" />
               </Button>
