@@ -8,14 +8,7 @@ interface CtaSectionProps {
   calLink?: string;
 }
 
-const CtaSection: React.FC<CtaSectionProps> = ({ calLink }) => {
-  const handleScheduleClick = () => {
-    if (calLink) {
-      // @ts-ignore - Cal is added via script
-      window.Cal?.showModal({ calLink });
-    }
-  };
-
+const CtaSection: React.FC<CtaSectionProps> = ({ calLink = "https://tally.so/r/w85kvz" }) => {
   return (
     <section id="cta" className="section relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
@@ -33,16 +26,17 @@ const CtaSection: React.FC<CtaSectionProps> = ({ calLink }) => {
           </ScrollReveal>
 
           <ScrollReveal animation="fade" delay={200} className="flex flex-col sm:flex-row gap-4">
-            <Button 
-              size="lg" 
-              className="button-gradient" 
-              onClick={handleScheduleClick}
-            >
-              Schedule a Consultation
-              <ArrowRightIcon className="ml-2 h-4 w-4" />
-            </Button>
+            <a href={calLink} target="_blank" rel="noopener noreferrer">
+              <Button 
+                size="lg" 
+                className="button-gradient"
+              >
+                Schedule a Consultation
+                <ArrowRightIcon className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
             
-            <a href="https://cal.com/laksh-pujary-7lvydw/15min" target="_blank" rel="noopener noreferrer">
+            <a href={calLink} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="gap-2">
                 Learn our targeting strategy
                 <ArrowRightIcon className="h-4 w-4" />

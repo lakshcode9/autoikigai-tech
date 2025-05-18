@@ -8,17 +8,7 @@ import { ArrowRightIcon } from 'lucide-react';
 import ScrollReveal from '@/components/animations/ScrollReveal';
 
 const Contact = () => {
-  // Add cal.com script
-  React.useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://cal.com/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-    
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  // Remove cal.com script as we're now using Tally.so
   
   return (
     <div className="bg-background min-h-screen w-full overflow-hidden">
@@ -42,7 +32,7 @@ const Contact = () => {
                   Schedule a 15-minute discovery call with our team to discuss your business needs and how we can help.
                 </p>
                 <div className="mt-6">
-                  <a href="https://cal.com/laksh-pujary-7lvydw/15min">
+                  <a href="https://tally.so/r/w85kvz">
                     <Button size="lg" className="button-gradient">
                       Schedule a Call 
                       <ArrowRightIcon className="ml-2 h-5 w-5" />

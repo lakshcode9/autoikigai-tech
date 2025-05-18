@@ -13,17 +13,7 @@ import { Link } from 'react-router-dom';
 const Index = () => {
   const [pricingInterval, setPricingInterval] = useState<'monthly' | 'annual'>('monthly');
   
-  // Add cal.com script
-  React.useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://cal.com/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-    
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  // Remove cal.com script as we're now using Tally.so
 
   return (
     <div className="w-full overflow-hidden">
@@ -133,7 +123,7 @@ const Index = () => {
           setPricingInterval={setPricingInterval}
         />
         <TestimonialsSection />
-        <CtaSection calLink="https://cal.com/laksh-pujary-7lvydw/15min" />
+        <CtaSection calLink="https://tally.so/r/w85kvz" />
       </div>
       <Footer />
     </div>

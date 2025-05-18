@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -8,17 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Check, ArrowRightIcon } from 'lucide-react';
 
 const About = () => {
-  // Add cal.com script
-  React.useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://cal.com/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-    
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  // Remove cal.com script as we're now using Tally.so
 
   const team = [
     {
@@ -172,7 +161,7 @@ const About = () => {
             
             <div className="mt-12 text-center">
               <ScrollReveal delay={400}>
-                <a href="https://cal.com/laksh-pujary-7lvydw/15min">
+                <a href="https://tally.so/r/w85kvz">
                   <Button size="lg" className="button-gradient">
                     Schedule a Consultation
                     <ArrowRightIcon className="ml-2 h-5 w-5" />

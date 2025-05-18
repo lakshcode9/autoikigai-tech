@@ -9,19 +9,8 @@ import FaqSection from '@/components/sections/FaqSection';
 const EnterpriseSolutions = () => {
   const [pricingInterval, setPricingInterval] = React.useState<'monthly' | 'annual'>('monthly');
   
-  // Add cal.com script - fixed to ensure proper cleanup
-  React.useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://cal.com/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-    
-    return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
+  // Remove cal.com script as we're now using Tally.so
+  // We don't need a script for Tally.so links as they're direct URLs
 
   return (
     <div className="bg-background w-full overflow-hidden">

@@ -18,17 +18,7 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const SalesSystem = () => {
-  // Add cal.com script
-  React.useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://cal.com/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-    
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  // Remove cal.com script as we're now using Tally.so
 
   return (
     <div className="bg-background w-full overflow-hidden">
@@ -100,7 +90,7 @@ const SalesSystem = () => {
         <FaqSection />
         <TestimonialsSection />
         <AboutUsSection />
-        <CtaSection calLink="https://cal.com/laksh-pujary-7lvydw/15min" />
+        <CtaSection calLink="https://tally.so/r/w85kvz" />
       </div>
       <Footer />
     </div>
