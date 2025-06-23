@@ -34,7 +34,6 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <ul className="flex space-x-8 font-medium">
-            <li><Link to="/sales-system" className="text-foreground hover:text-primary transition-colors">Sales System</Link></li>
             <li><Link to="/case-studies" className="text-foreground hover:text-primary transition-colors">Case Studies</Link></li>
             <li><Link to="/about" className="text-foreground hover:text-primary transition-colors">About</Link></li>
             <li><Link to="/blog" className="text-foreground hover:text-primary transition-colors">Blog</Link></li>
@@ -67,15 +66,6 @@ const Navbar = () => {
         >
           <nav className="container py-8">
             <ul className="flex flex-col space-y-6 text-xl">
-              <li>
-                <Link
-                  to="/sales-system"
-                  className="block py-2 text-foreground hover:text-primary transition-colors"
-                  onClick={toggleMenu}
-                >
-                  Sales System
-                </Link>
-              </li>
               <li>
                 <Link
                   to="/case-studies"

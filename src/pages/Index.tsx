@@ -47,13 +47,14 @@ const Index = () => {
               
               <ScrollReveal animation="fade" delay={100}>
                 <h1 className="text-foreground dark:text-white text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold max-w-5xl mx-auto leading-[1.1] mb-6 md:mb-8">
-                  Our <span className="text-gradient">Sales System</span>
+                  Strategic Growth <br />
+                  <span className="text-gradient">for ambitious B2B leaders.</span>
                 </h1>
               </ScrollReveal>
               
               <ScrollReveal animation="fade" delay={200}>
                 <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground dark:text-gray-300 max-w-3xl mx-auto mb-8 md:mb-12">
-                  An accessible solution for businesses looking to improve their sales process efficiently.
+                  From complete automation systems to comprehensive enterprise solutions, we generate high-quality leads for businesses at every scale
                 </p>
               </ScrollReveal>
               

@@ -1,6 +1,6 @@
 
 import ScrollReveal from "../animations/ScrollReveal";
-import { ArrowRightIcon } from "lucide-react";
+import { ArrowRightIcon, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ResultsSection = () => {
@@ -48,9 +48,16 @@ const ResultsSection = () => {
               </div>
               
               <div>
-                <Button className="button-gradient mt-4">
-                  Case Study Coming Soon
-                </Button>
+                <a 
+                  href="https://docs.google.com/spreadsheets/d/1Y_Ns4cvZKuZMChepMT4zUpEXj-OdwB_IN6dXRgf5GE8/edit?usp=sharing" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="button-gradient mt-4">
+                    Case Study
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                </a>
               </div>
             </div>
           </ScrollReveal>
@@ -105,9 +112,16 @@ const ResultsSection = () => {
               </div>
               
               <div>
-                <Button className="button-gradient mt-4">
-                  Case Study Coming Soon
-                </Button>
+                <a 
+                  href="https://docs.google.com/spreadsheets/d/1Y_Ns4cvZKuZMChepMT4zUpEXj-OdwB_IN6dXRgf5GE8/edit?usp=sharing" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="button-gradient mt-4">
+                    Case Study
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                </a>
               </div>
             </div>
           </ScrollReveal>
