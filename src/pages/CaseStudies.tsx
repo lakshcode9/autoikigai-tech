@@ -53,7 +53,7 @@ const CaseStudies = () => {
               
               <ScrollReveal delay={300}>
                 <div className="mt-12">
-                  <a href="https://tally.so/r/w85kvz">
+                  <a href="https://cal.com/laksh-pujary-7lvydw/intro-call-45">
                     <Button variant="outline" size="lg">
                       Discuss Your Project
                     </Button>

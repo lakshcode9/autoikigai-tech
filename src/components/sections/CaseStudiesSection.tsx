@@ -27,7 +27,7 @@ const CaseStudiesSection = () => {
               rel="noopener noreferrer"
             >
               <Button size="lg" className="button-gradient">
-                View All Case Studies
+                View Case Studies
                 <ExternalLink className="ml-2 h-5 w-5" />
               </Button>
             </a>
