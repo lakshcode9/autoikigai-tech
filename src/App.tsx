@@ -17,7 +17,6 @@ import HelpCenter from "./pages/HelpCenter";
 import CookiePolicy from "./pages/CookiePolicy";
 import JobApplication from "./pages/JobApplication";
 import About from "./pages/About";
-import SalesSystem from "./pages/SalesSystem";
 import EnterpriseSolutions from "./pages/EnterpriseSolutions";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -47,7 +46,6 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/solutions" element={<EnterpriseSolutions />} />
             <Route path="/enterprise" element={<EnterpriseSolutions />} />
-            <Route path="/sales-system" element={<SalesSystem />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/careers/:jobId" element={<JobApplication />} />

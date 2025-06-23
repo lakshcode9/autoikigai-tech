@@ -8,7 +8,7 @@ interface CtaSectionProps {
   calLink?: string;
 }
 
-const CtaSection: React.FC<CtaSectionProps> = ({ calLink = "https://tally.so/r/w85kvz" }) => {
+const CtaSection: React.FC<CtaSectionProps> = ({ calLink = "https://cal.com/laksh-pujary-7lvydw/intro-call-45" }) => {
   return (
     <section id="cta" className="section relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
