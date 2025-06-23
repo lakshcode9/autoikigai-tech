@@ -2,19 +2,17 @@
 import React, { useState } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import PricingSection from '@/components/sections/PricingSection';
 import FeaturesSection from '@/components/sections/FeaturesSection';
 import CaseStudiesSection from '@/components/sections/CaseStudiesSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CtaSection from '@/components/sections/CtaSection';
 import HeroSection from '@/components/sections/HeroSection';
+import ScrollReveal from '@/components/animations/ScrollReveal';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
-  const [pricingInterval, setPricingInterval] = useState<'monthly' | 'annual'>('monthly');
-  
-  // Remove cal.com script as we're now using Tally.so
-
   return (
     <div className="w-full overflow-hidden">
       <Navbar />
@@ -22,106 +20,120 @@ const Index = () => {
       <div className="bg-background">
         <section className="section px-4 md:px-6">
           <div className="container mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-              <span className="inline-block text-sm font-medium text-primary mb-3">
-                Our Offerings
-              </span>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight">
-                Solutions for Every Business
-              </h2>
-              <p className="text-muted-foreground">
-                Choose the right solution for your business needs
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-card/50 border border-white/10 p-6 md:p-8 rounded-lg">
-                <div className="mb-4 inline-block py-1 px-3 rounded-full bg-secondary/20 text-sm font-medium text-secondary">
-                  Sales System
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold mb-3">Sales System</h3>
-                <p className="text-muted-foreground mb-6">
+            <div className="text-center max-w-4xl mx-auto mb-12 md:mb-16">
+              <ScrollReveal>
+                <span className="inline-block text-sm font-medium text-primary mb-3">
+                  Our Main Solution
+                </span>
+              </ScrollReveal>
+              <ScrollReveal delay={100}>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight">
+                  <span className="text-gradient">Sales System</span> - Your Complete Solution
+                </h2>
+              </ScrollReveal>
+              <ScrollReveal delay={200}>
+                <p className="text-lg md:text-xl text-muted-foreground mb-8">
                   Our accessible solution designed for businesses looking to improve their sales process efficiently.
                 </p>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-2">
-                    <div className="h-5 w-5 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-secondary text-xs">✓</span>
-                    </div>
-                    <span>Core sales automation</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="h-5 w-5 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-secondary text-xs">✓</span>
-                    </div>
-                    <span>Basic targeting capabilities</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="h-5 w-5 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-secondary text-xs">✓</span>
-                    </div>
-                    <span>Standard reporting</span>
-                  </li>
-                </ul>
-                <Link to="/sales-system" className="inline-block w-full">
-                  <button className="w-full py-2 px-4 border-2 border-secondary/30 text-foreground rounded-md hover:bg-secondary/10 transition-colors text-center">
-                    Learn More
-                  </button>
-                </Link>
-              </div>
+              </ScrollReveal>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              <ScrollReveal delay={300}>
+                <div className="bg-primary/5 border border-primary/20 p-8 md:p-12 rounded-xl relative overflow-hidden">
+                  <div className="absolute top-0 right-0 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+                    RECOMMENDED
+                  </div>
+                  
+                  <div className="mb-6 inline-block py-2 px-4 rounded-full bg-primary/20 text-base font-medium text-primary">
+                    Sales System
+                  </div>
+                  
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4">Transform Your Sales Process</h3>
+                  
+                  <p className="text-lg text-muted-foreground mb-8">
+                    Get the core functionality you need to automate your sales process, target the right prospects, and grow your revenue efficiently.
+                  </p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <ul className="space-y-4">
+                      <li className="flex items-center gap-3">
+                        <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                          <span className="text-primary text-sm">✓</span>
+                        </div>
+                        <span className="text-base">Core sales automation</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                          <span className="text-primary text-sm">✓</span>
+                        </div>
+                        <span className="text-base">Smart targeting capabilities</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                          <span className="text-primary text-sm">✓</span>
+                        </div>
+                        <span className="text-base">Comprehensive reporting</span>
+                      </li>
+                    </ul>
+                    
+                    <ul className="space-y-4">
+                      <li className="flex items-center gap-3">
+                        <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                          <span className="text-primary text-sm">✓</span>
+                        </div>
+                        <span className="text-base">Quick implementation</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                          <span className="text-primary text-sm">✓</span>
+                        </div>
+                        <span className="text-base">Affordable pricing</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                          <span className="text-primary text-sm">✓</span>
+                        </div>
+                        <span className="text-base">Dedicated support</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Link to="/sales-system" className="flex-1">
+                      <Button className="w-full h-12 bg-primary text-white hover:bg-primary/90 text-base">
+                        Learn More About Sales System
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                    </Link>
+                    <a href="https://tally.so/r/w85kvz" className="flex-1">
+                      <Button variant="outline" className="w-full h-12 text-base">
+                        Get Started Now
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              </ScrollReveal>
               
-              <div className="bg-primary/5 border border-primary/20 p-6 md:p-8 rounded-lg relative overflow-hidden">
-                <div className="absolute top-0 right-0 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-                  RECOMMENDED
+              <ScrollReveal delay={400}>
+                <div className="mt-12 text-center">
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Looking for enterprise-grade solutions?
+                  </p>
+                  <Link to="/enterprise">
+                    <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
+                      View Enterprise Options
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
-                <div className="mb-4 inline-block py-1 px-3 rounded-full bg-primary/20 text-sm font-medium text-primary">
-                  Enterprise
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold mb-3">Enterprise Solutions</h3>
-                <p className="text-muted-foreground mb-6">
-                  Comprehensive, customized strategies for mid-market and enterprise businesses seeking significant revenue growth.
-                </p>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-2">
-                    <div className="h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary text-xs">✓</span>
-                    </div>
-                    <span>Advanced AI-powered automation</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary text-xs">✓</span>
-                    </div>
-                    <span>Precision targeting systems</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary text-xs">✓</span>
-                    </div>
-                    <span>Dedicated success team</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary text-xs">✓</span>
-                    </div>
-                    <span>Comprehensive analytics</span>
-                  </li>
-                </ul>
-                <Link to="/enterprise" className="inline-block w-full">
-                  <button className="w-full py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors text-center">
-                    Learn More
-                  </button>
-                </Link>
-              </div>
+              </ScrollReveal>
             </div>
           </div>
         </section>
         <FeaturesSection />
         <CaseStudiesSection />
-        <PricingSection
-          pricingInterval={pricingInterval}
-          setPricingInterval={setPricingInterval}
-        />
         <TestimonialsSection />
         <CtaSection calLink="https://tally.so/r/w85kvz" />
       </div>

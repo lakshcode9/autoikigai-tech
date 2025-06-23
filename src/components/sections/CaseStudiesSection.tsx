@@ -2,31 +2,27 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRightIcon } from "lucide-react";
+import { ArrowRightIcon, ExternalLink } from "lucide-react";
 import ScrollReveal from "@/components/animations/ScrollReveal";
-import { Link } from 'react-router-dom';
 
 const caseStudies = [
   {
     title: "TechNova Solutions",
     description: "How we increased qualified leads by 347% with our AI-powered targeting system",
     industry: "SaaS",
-    results: "347% increase in qualified leads",
-    link: "/case-studies"
+    results: "347% increase in qualified leads"
   },
   {
     title: "Global Logistics Inc.",
     description: "Automated lead qualification process resulting in 62% higher conversion rates",
     industry: "Logistics",
-    results: "62% higher conversion rates",
-    link: "/case-studies"
+    results: "62% higher conversion rates"
   },
   {
     title: "FinEdge Capital",
     description: "Customized CRM implementation led to 83% improvement in client relationship management",
     industry: "Financial Services",
-    results: "83% improvement in client relations",
-    link: "/case-studies"
+    results: "83% improvement in client relations"
   }
 ];
 
@@ -62,12 +58,17 @@ const CaseStudiesSection = () => {
                   </p>
                 </CardContent>
                 <CardFooter>
-                  <Link to={caseStudy.link} className="w-full">
+                  <a 
+                    href="https://docs.google.com/spreadsheets/d/1Y_Ns4cvZKuZMChepMT4zUpEXj-OdwB_IN6dXRgf5GE8/edit?usp=sharing" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-full"
+                  >
                     <Button variant="outline" className="w-full">
-                      Read Full Case Study
-                      <ArrowRightIcon className="ml-2 h-4 w-4" />
+                      View Details
+                      <ExternalLink className="ml-2 h-4 w-4" />
                     </Button>
-                  </Link>
+                  </a>
                 </CardFooter>
               </Card>
             </ScrollReveal>
@@ -76,12 +77,16 @@ const CaseStudiesSection = () => {
         
         <div className="text-center">
           <ScrollReveal delay={300}>
-            <Link to="/case-studies">
+            <a 
+              href="https://docs.google.com/spreadsheets/d/1Y_Ns4cvZKuZMChepMT4zUpEXj-OdwB_IN6dXRgf5GE8/edit?usp=sharing" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               <Button size="lg" variant="outline">
                 View All Case Studies
-                <ArrowRightIcon className="ml-2 h-5 w-5" />
+                <ExternalLink className="ml-2 h-5 w-5" />
               </Button>
-            </Link>
+            </a>
           </ScrollReveal>
         </div>
       </div>
