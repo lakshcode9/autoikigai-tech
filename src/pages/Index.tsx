@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -50,6 +49,12 @@ const Index = () => {
                   Strategic Growth <br />
                   <span className="text-gradient">for ambitious B2B leaders.</span>
                 </h1>
+              </ScrollReveal>
+              
+              <ScrollReveal animation="fade" delay={150}>
+                <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground dark:text-gray-300 max-w-3xl mx-auto mb-6 md:mb-8">
+                  Beyond automation systems, we connect you with the strategic networks and industry specialists that accelerate your growth.
+                </p>
               </ScrollReveal>
               
               <ScrollReveal animation="fade" delay={200}>
