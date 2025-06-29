@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
@@ -8,7 +7,7 @@ interface CtaSectionProps {
   calLink?: string;
 }
 
-const CtaSection: React.FC<CtaSectionProps> = ({ calLink = "https://cal.com/laksh-pujary-7lvydw/intro-call-45" }) => {
+const CtaSection: React.FC<CtaSectionProps> = ({ calLink = "https://cal.com/laksh-pujary/intro-call-45" }) => {
   return (
     <section id="cta" className="section relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">

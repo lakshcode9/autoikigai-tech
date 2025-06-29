@@ -83,7 +83,7 @@ const Index = () => {
           <FaqSection />
           <TestimonialsSection />
           <AboutUsSection />
-          <CtaSection calLink="https://cal.com/laksh-pujary-7lvydw/intro-call-45" />
+          <CtaSection calLink="https://cal.com/laksh-pujary/intro-call-45" />
         </div>
       </div>
       <Footer />

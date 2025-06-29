@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -99,7 +98,7 @@ const EnterpriseSolutions = () => {
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <a href="https://cal.com/laksh-pujary-7lvydw/intro-call-45" className="flex-1">
+                    <a href="https://cal.com/laksh-pujary/intro-call-45" className="flex-1">
                       <Button className="w-full h-12 bg-primary text-white hover:bg-primary/90 text-base">
                         Schedule Enterprise Consultation
                         <ArrowRight className="ml-2 h-5 w-5" />
@@ -119,7 +118,7 @@ const EnterpriseSolutions = () => {
         </section>
         <FeaturesSection />
         <TestimonialsSection />
-        <CtaSection calLink="https://cal.com/laksh-pujary-7lvydw/intro-call-45" />
+        <CtaSection calLink="https://cal.com/laksh-pujary/intro-call-45" />
       </div>
       <Footer />
     </div>

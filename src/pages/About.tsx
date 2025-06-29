@@ -161,7 +161,7 @@ const About = () => {
             
             <div className="mt-12 text-center">
               <ScrollReveal delay={400}>
-                <a href="https://tally.so/r/w85kvz">
+                <a href="https://cal.com/laksh-pujary/intro-call-45">
                   <Button size="lg" className="button-gradient">
                     Schedule a Consultation
                     <ArrowRightIcon className="ml-2 h-5 w-5" />

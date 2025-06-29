@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -53,7 +52,7 @@ const CaseStudies = () => {
               
               <ScrollReveal delay={300}>
                 <div className="mt-12">
-                  <a href="https://cal.com/laksh-pujary-7lvydw/intro-call-45">
+                  <a href="https://cal.com/laksh-pujary/intro-call-45">
                     <Button variant="outline" size="lg">
                       Discuss Your Project
                     </Button>
