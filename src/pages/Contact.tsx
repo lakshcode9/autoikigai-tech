@@ -30,7 +30,7 @@ const Contact = () => {
                   Schedule a 15-minute discovery call with our team to discuss your business needs and how we can help.
                 </p>
                 <div className="mt-6">
-                  <a href="https://tally.so/r/w85kvz" target="_blank" rel="noopener noreferrer">
+                  <a href="https://cal.com/laksh-pujary/intro-call-45" target="_blank" rel="noopener noreferrer">
                     <Button size="lg" className="button-gradient w-full">
                       Schedule a Call 
                       <ArrowRightIcon className="ml-2 h-5 w-5" />
