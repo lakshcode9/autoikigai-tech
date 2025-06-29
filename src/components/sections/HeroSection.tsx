@@ -62,13 +62,6 @@ const HeroSection = () => {
                 </span>
               </Button>
             </Link>
-            <Link to="/sales-system" className="w-full sm:w-auto">
-              <Button size="default" variant="outline" className="w-full h-10 text-sm border-primary/20 text-foreground hover:border-primary/50 hover:bg-primary/5 hover-lift">
-                <span className="flex items-center justify-center w-full">
-                  Sales System
-                </span>
-              </Button>
-            </Link>
           </ScrollReveal>
         </div>
       </div>
