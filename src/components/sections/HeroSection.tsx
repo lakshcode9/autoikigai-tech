@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "../animations/ScrollReveal";
 import ParallaxItem from "../animations/ParallaxItem";
@@ -39,17 +38,17 @@ const HeroSection = () => {
             </p>
           </ScrollReveal>
           
-          <ScrollReveal animation="scale" delay={300} className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-lg mx-auto">
+          <ScrollReveal animation="scale" delay={300} className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md mx-auto">
             <Link to="/solutions" className="w-full sm:w-auto">
-              <Button size={isMobile ? "default" : "lg"} className="bg-primary text-white hover:bg-primary/90 w-full h-12 sm:h-14 text-base font-medium">
+              <Button size="default" className="bg-primary text-white hover:bg-primary/90 w-full h-10 text-sm font-medium">
                 <span className="flex items-center justify-center w-full">
                   Enterprise Solutions
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </span>
               </Button>
             </Link>
             <Link to="/sales-system" className="w-full sm:w-auto">
-              <Button size={isMobile ? "default" : "lg"} variant="outline" className="w-full h-12 sm:h-14 text-base border-primary/20 text-foreground hover:border-primary/50 hover:bg-primary/5">
+              <Button size="default" variant="outline" className="w-full h-10 text-sm border-primary/20 text-foreground hover:border-primary/50 hover:bg-primary/5">
                 <span className="flex items-center justify-center w-full">
                   Sales System
                 </span>
