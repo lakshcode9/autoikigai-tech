@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -120,6 +119,53 @@ export default {
 				'slide-in-right': {
 					'0%': { transform: 'translateX(100%)', opacity: '0' },
 					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'bounce-in': {
+					'0%': { transform: 'scale(0.3)', opacity: '0' },
+					'50%': { transform: 'scale(1.05)' },
+					'70%': { transform: 'scale(0.9)' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'zoom-in': {
+					'0%': { transform: 'scale(0)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'flip-in': {
+					'0%': { transform: 'perspective(400px) rotateY(90deg)', opacity: '0' },
+					'40%': { transform: 'perspective(400px) rotateY(-10deg)' },
+					'70%': { transform: 'perspective(400px) rotateY(10deg)' },
+					'100%': { transform: 'perspective(400px) rotateY(0deg)', opacity: '1' }
+				},
+				'wiggle': {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' }
+				},
+				'pulse-scale': {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.1)' }
+				},
+				'shake': {
+					'0%, 100%': { transform: 'translateX(0)' },
+					'10%, 30%, 50%, 70%, 90%': { transform: 'translateX(-10px)' },
+					'20%, 40%, 60%, 80%': { transform: 'translateX(10px)' }
+				},
+				'glow': {
+					'0%, 100%': { boxShadow: '0 0 5px rgba(59, 130, 246, 0.5)' },
+					'50%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.6)' }
+				},
+				'gradient-x': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' }
+				},
+				'gradient-y': {
+					'0%, 100%': { backgroundPosition: '50% 0%' },
+					'50%': { backgroundPosition: '50% 100%' }
+				},
+				'gradient-xy': {
+					'0%, 100%': { backgroundPosition: '0% 0%' },
+					'25%': { backgroundPosition: '100% 0%' },
+					'50%': { backgroundPosition: '100% 100%' },
+					'75%': { backgroundPosition: '0% 100%' }
 				}
 			},
 			animation: {
@@ -135,7 +181,17 @@ export default {
 				'scanline': 'scanline 8s linear infinite',
 				'blink': 'blink 2s linear infinite',
 				'slide-in-left': 'slide-in-left 0.7s ease-out',
-				'slide-in-right': 'slide-in-right 0.7s ease-out'
+				'slide-in-right': 'slide-in-right 0.7s ease-out',
+				'bounce-in': 'bounce-in 0.8s ease-out',
+				'zoom-in': 'zoom-in 0.6s ease-out',
+				'flip-in': 'flip-in 0.8s ease-out',
+				'wiggle': 'wiggle 1s ease-in-out infinite',
+				'pulse-scale': 'pulse-scale 2s ease-in-out infinite',
+				'shake': 'shake 0.5s ease-in-out',
+				'glow': 'glow 2s ease-in-out infinite',
+				'gradient-x': 'gradient-x 3s ease infinite',
+				'gradient-y': 'gradient-y 3s ease infinite',
+				'gradient-xy': 'gradient-xy 4s ease infinite'
 			},
 			fontFamily: {
 				sans: ['Plus Jakarta Sans', 'Söhne', 'Inter', 'sans-serif'],

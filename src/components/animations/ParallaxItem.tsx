@@ -1,4 +1,3 @@
-
 import { useRef, useEffect, ReactNode } from 'react';
 
 interface ParallaxItemProps {
@@ -6,13 +5,17 @@ interface ParallaxItemProps {
   speed?: number;
   className?: string;
   direction?: 'up' | 'down';
+  rotateSpeed?: number;
+  scaleRange?: [number, number];
 }
 
 const ParallaxItem = ({ 
   children, 
   speed = 0.1, 
   className = "", 
-  direction = 'up' 
+  direction = 'up',
+  rotateSpeed = 0,
+  scaleRange = [1, 1]
 }: ParallaxItemProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const multiplier = direction === 'up' ? -1 : 1;
@@ -22,7 +25,10 @@ const ParallaxItem = ({
       if (!ref.current) return;
       const scrollY = window.scrollY;
       const translateY = scrollY * speed * multiplier;
-      ref.current.style.transform = `translateY(${translateY}px)`;
+      const rotate = scrollY * rotateSpeed;
+      const scale = scaleRange[0] + (scaleRange[1] - scaleRange[0]) * (scrollY / window.innerHeight);
+      
+      ref.current.style.transform = `translateY(${translateY}px) rotate(${rotate}deg) scale(${Math.max(scaleRange[0], Math.min(scaleRange[1], scale))})`;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -30,10 +36,10 @@ const ParallaxItem = ({
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [speed, multiplier]);
+  }, [speed, multiplier, rotateSpeed, scaleRange]);
 
   return (
-    <div ref={ref} className={className}>
+    <div ref={ref} className={`${className} transition-transform duration-100 ease-out`}>
       {children}
     </div>
   );

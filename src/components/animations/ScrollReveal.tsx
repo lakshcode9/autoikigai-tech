@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState, ReactNode } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -7,7 +6,7 @@ interface ScrollRevealProps {
   className?: string;
   threshold?: number;
   delay?: number;
-  animation?: "fade" | "left" | "right" | "bottom" | "top" | "scale" | "rotate" | "none";
+  animation?: "fade" | "left" | "right" | "bottom" | "top" | "scale" | "rotate" | "none" | "bounce" | "slide-up" | "slide-down" | "zoom" | "flip";
   duration?: number;
 }
 
@@ -53,7 +52,7 @@ const ScrollReveal = ({
     };
   }, [threshold, delay, isMobile]);
   
-  // Simplify animations on mobile
+  // Enhanced animations with more variety
   let animationClass = "";
   
   if (isMobile) {
@@ -65,6 +64,11 @@ const ScrollReveal = ({
       case "top":
       case "scale":
       case "rotate":
+      case "bounce":
+      case "slide-up":
+      case "slide-down":
+      case "zoom":
+      case "flip":
         animationClass = "fade-in";
         break;
       case "fade":
@@ -95,6 +99,21 @@ const ScrollReveal = ({
       case "rotate":
         animationClass = "rotate-in";
         break;
+      case "bounce":
+        animationClass = "bounce-in";
+        break;
+      case "slide-up":
+        animationClass = "slide-in-up";
+        break;
+      case "slide-down":
+        animationClass = "slide-in-down";
+        break;
+      case "zoom":
+        animationClass = "zoom-in";
+        break;
+      case "flip":
+        animationClass = "flip-in";
+        break;
       case "fade":
         animationClass = "fade-in";
         break;
@@ -107,7 +126,7 @@ const ScrollReveal = ({
   return (
     <div 
       ref={ref} 
-      className={`${animationClass} ${isVisible ? 'is-visible' : ''} ${className}`}
+      className={`${animationClass} ${isVisible ? 'is-visible' : ''} ${className} hover-lift`}
       style={{ 
         transitionDuration: `${isMobile ? Math.min(duration, 500) : duration}ms`,
         width: "100%" // Ensure content is contained
