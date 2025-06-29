@@ -43,7 +43,7 @@ const HeroSection = () => {
           <ScrollReveal animation="scale" delay={100}>
             <h1 className="text-foreground dark:text-white text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold max-w-5xl mx-auto leading-[1.1] mb-6 md:mb-8 hover-lift">
               Strategic Growth <br />
-              <span className="text-gradient glitch" data-text="for ambitious B2B leaders.">for ambitious B2B leaders.</span>
+              <span className="text-gradient">for ambitious B2B leaders.</span>
             </h1>
           </ScrollReveal>
           
